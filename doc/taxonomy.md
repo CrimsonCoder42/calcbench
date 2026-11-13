@@ -12,8 +12,10 @@ the folder is created with its first function). testing/index_test.go checks thi
 | Group | Package (import path under calcbench/) | SHORT | Status | Holds |
 |---|---|---|---|---|
 | ALG | `algo/bits` | BITS | built | bit manipulation |
+| ALG | `algo/backoff` | BACKOF | built | retry backoff: capped exponential, full, equal and decorrelated jitter; the caller passes the random draw (S20, D-087) |
 | ALG | `algo/bloom` | BLOOM | built | Bloom filter with enhanced double hashing, false-positive rate, optimal parameters (S10) |
 | ALG | `algo/checksum` | CHKSUM | planned | check digits and checksums (D-016) |
+| ALG | `algo/cron` | CRON | built | POSIX five-field cron specs: parse, next fire time with stated DST rules (S20, D-087) |
 | ALG | `algo/dp` | DP | built | dynamic-programming patterns |
 | ALG | `algo/enumerate` | ENUM | built | permutations, combinations, subsets, parentheses, Gray codes as iterators (S10; proposed by the combinatorics pass) |
 | ALG | `algo/geometry2d` | GEO2D | built | computational geometry on exact int64 points: hull, closest pair, point in polygon, intersections (S10; measurement formulas are num/geometry) |

@@ -2,6 +2,12 @@
 
 Newest first. Each entry: date, slice, the IDs with file:line.
 
+## 2026-11-13 — S20 toolbench requests R-1…R-3 (shipped)
+Work `toolbench_requests_2026-11-13/` (BRIEF, README, REPORT). Decision D-087; assumptions A-068…A-071. 7 functions; new algo/backoff and algo/cron.
+- `algo/backoff` (4): ALG-BACKOF-001 Exponential `algo/backoff/exponential.go:37` · ALG-BACKOF-002 FullJitter `algo/backoff/full_jitter.go:23` · ALG-BACKOF-003 EqualJitter `algo/backoff/equal_jitter.go:20` · ALG-BACKOF-004 DecorrelatedJitter `algo/backoff/decorrelated_jitter.go:24`
+- `algo/cron` (2): ALG-CRON-001 ParseCron `algo/cron/parse_cron.go:62` · ALG-CRON-002 CronSpec.Next `algo/cron/next.go:38`
+- `num/integer` (1): NUM-INTEG-013 CeilDiv `num/integer/ceil_div.go:22`
+
 ## 2026-11-13 — S19 HFT and execution maths (shipped)
 Work `hft_math_2026-11-13/` (BRIEF, B1–B4 row files, REPORT). Decision D-086. 59 functions: new fin/market and additions to fin/invest, num/series, num/signal and algo/stream. REUSED 4 · NEEDS SOURCE 3 (DepthWeightedImbalance, TWAP, continuous Kelly).
 - `algo/stream` (12): ALG-STREAM-005 WindowedVariance `algo/stream/windowed_variance.go:48` · ALG-STREAM-006 WindowedCovariance `algo/stream/windowed_covariance.go:46` · ALG-STREAM-007 WindowedZScore `algo/stream/windowed_zscore.go:24` · ALG-STREAM-008 OnlineCovariance `algo/stream/online_covariance.go:36` · ALG-STREAM-009 EWMAStream `algo/stream/ewma_stream.go:31` · ALG-STREAM-010 StreamingVWAP `algo/stream/streaming_vwap.go:30` · ALG-STREAM-011 WindowedVWAP `algo/stream/windowed_vwap.go:37` · ALG-STREAM-012 PriceToTicks `algo/stream/price_tick.go:32` · ALG-STREAM-013 TicksToPrice `algo/stream/price_tick.go:58` · ALG-STREAM-014 RoundToTick `algo/stream/price_tick.go:82` · ALG-STREAM-015 BasisPointsToFraction `algo/stream/basis_point.go:22` · ALG-STREAM-016 FractionToBasisPoints `algo/stream/basis_point.go:41`

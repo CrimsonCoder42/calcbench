@@ -21,4 +21,5 @@
 //	NUM-INTEG-010  FractionMul          product of two fractions in lowest terms, overflow-checked
 //	NUM-INTEG-011  FractionDiv          quotient of two fractions in lowest terms
 //	NUM-INTEG-012  Divisors             every positive divisor of n, ascending
+//	NUM-INTEG-013  CeilDiv              ⌈a/b⌉ for int64, exact, overflow-checked
 package integer

@@ -566,3 +566,15 @@ reordering D-009.
 - **NEEDS SOURCE, not built:** DepthWeightedImbalance and TWAP (no primary source defines either down to the
   equation), and the continuous Kelly form (μ − r)/σ² (Kelly 1956 gives only the binary bet).
 - **WeightedMid** is the imbalance-weighted mid only; Stoikov's full Markov-chain micro-price is not built.
+
+## D-087 toolbench requests R-1…R-3: homes and shapes (2026-11-13, S20, DECIDED D1–D3)
+- **algo/backoff (BACKOF), new.** Exponential, FullJitter, EqualJitter, DecorrelatedJitter on integer nanoseconds;
+  the random draw u ∈ [0, 1) is a parameter, scaled exactly as ⌊d·⌊u·2⁵³⌋ / 2⁵³⌋ in 128 bits, so every function is
+  pure. Lost: an RNG inside (impure, untestable), and float64 duration arithmetic (inexact above 2⁵³ ns).
+- **num/integer CeilDiv (NUM-INTEG-013).** Truncated quotient plus one when the remainder has the divisor's sign; no
+  a + b − 1 overflow. b = 0 is the package's existing ErrZeroDenominator (num/integer has no ErrDivByZero; a second
+  sentinel for the same condition would split callers' errors.Is checks). Lost: a new ErrDivByZero.
+- **algo/cron (CRON), new.** POSIX five-field syntax only (IEEE Std 1003.1-2024 crontab): no steps, names or
+  macros, which POSIX does not define (no source, no ship). Next searches civil fields with carries over bitsets,
+  never minute by minute; DST rules as the request states (gap → the transition instant, overlap → first occurrence
+  only). Lost: a time/calendar package (not in the taxonomy) and the Vixie extensions (no primary standard).
