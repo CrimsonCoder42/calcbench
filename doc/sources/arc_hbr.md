@@ -1,0 +1,4 @@
+# arc_hbr → MED-CARDIO-053 ARCHBRHighBleedingRisk
+- Citation: Urban P, Mehran R, Colleran R, et al. Circulation. 2019;140(3):240-261. doi:10.1161/CIRCULATIONAHA.119.040167. PMID 31116032. PMC6636810.
+- Rule (text): "Patients are considered to be at HBR if at least 1 major or 2 minor criteria are met." Table 1 major examples: long-term OAC, eGFR <30, Hb <11 g/dL, platelets <100×10⁹/L, bleeding in past 6 months, chronic bleeding diathesis, cirrhosis with portal hypertension, active malignancy, prior ICH / brain AVM / moderate-severe ischemic stroke <6 months, planned major surgery on DAPT, recent major surgery/trauma <30 d. Minor: age ≥75, eGFR 30–59, Hb 11–12.9 (men) / 11–11.9 (women), bleed 6–12 months, any ischemic stroke, long-term NSAID/steroid.
+- Function takes the counts (criteria judged by the caller). Route: PMC article page, read 2026-11-12.

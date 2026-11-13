@@ -1,0 +1,6 @@
+# pucai → MED-GASTRO-014 PUCAIScore, MED-GASTRO-015 PUCAIActivity (PORTED-SECONDARY)
+- Primary: Turner D, Otley AR, Mack D, et al. Gastroenterology. 2007;133(2):423-432. doi:10.1053/j.gastro.2007.05.029, PMID 17681163 (not opened).
+- Secondary 1: Moon JS. Intest Res. 2019;17(1):17-23. doi:10.5217/ir.2018.00139, PMID 30625263, PMC6361015, Table 3: abdominal pain 0/5/10; rectal bleeding none 0, small <50 % of stools 10, small with most stools 20, large (>50 % of stools) 30; consistency formed 0, partially formed 5, completely unformed 10; stools/24 h 0–2 0, 3–5 5, 6–8 10, >8 15; nocturnal 10; activity no limitation 0, occasional 5, severe restricted 10; total 0–85. Cites Turner 2007.
+- Secondary 2: Saadah OI, AlAmeel T, Al Sarkhy A. Saudi J Gastroenterol. 2025;31(3):107-136. doi:10.4103/sjg.sjg_171_24, PMID 39215473, PMC12155459, Table 5: same points; "Remission <10; Mild 10–34; Moderate 35–64; Severe >65" (its Turner reference not confirmed — CONFIRM).
+- Cut-offs: Kolho KL, Turner D. ISRN Gastroenterol. 2013;2013:179024. doi:10.1155/2013/179024, PMID 23533791, PMC3600299: "<10 remission, 10–34 mild, 35–64 moderate, ≥65 severe" (cites Turner 2007). ≥65 used.
+- Route: Europe PMC XML / PMC (research agent), 2026-11-12.

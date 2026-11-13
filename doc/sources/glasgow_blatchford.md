@@ -1,0 +1,6 @@
+# glasgow_blatchford → MED-GASTRO-010 GlasgowBlatchfordScore (PORTED-SECONDARY)
+- Primary: Blatchford O, Murray WR, Blatchford M. Lancet. 2000;356(9238):1318-1321. doi:10.1016/S0140-6736(00)02816-6, PMID 11073021 (not opened).
+- Secondary 1: Banister T, Spiking J, Ayaru L. BMJ Open Gastroenterol. 2018;5(1):e000225. doi:10.1136/bmjgast-2018-000225, PMID 30233807, PMC6135483, Table 1: urea mmol/L 6.5–7.9 = 2, 8.0–9.9 = 3, 10.0–25.0 = 4, >25.0 = 6; Hb men g/L 120–129 = 1, 100–119 = 3, <100 = 6; women 100–119 = 1, <100 = 6; SBP 100–109 = 1, 90–99 = 2, <90 = 3; pulse ≥100 = 1; melaena 1; syncope 2; hepatic disease 2; cardiac failure 2. Cites Blatchford 2000.
+- Secondary 2: Orpen-Palmer J, Stanley AJ. J Clin Med. 2023;12(11):3678. doi:10.3390/jcm12113678, PMID 37297873, PMC10253886, Table 1: same points; urea 10.0–24.9 = 4, >25.0 = 6; Hb men 120–130, women 100–120. Cites Blatchford 2000. Third: Adrych 2025 PMC12746585 Table I: urea ≥25 = 6, Hb men 120–129.
+- Edge policy (code): half-open bands; urea 25.0 → 6 (2 of 3 sources), men Hb 130 → 0, women 120 → 0. No mg/dL form in any source (consumer uses BUN mg/dL; 25 mmol/L urea = 70 mg/dL BUN, consumer edge "> 70").
+- Route: PMC article pages / Europe PMC XML (research agent), 2026-11-12.

@@ -1,0 +1,5 @@
+# oakland_score → MED-GASTRO-013 OaklandScore (PORTED)
+- Primary: Oakland K, Jairath V, Uberoi R, Guy R, Ayaru L, Mortensen N, Murphy MF, Collins GS. Lancet Gastroenterol Hepatol. 2017;2(9):635-643. doi:10.1016/S2468-1253(17)30150-4, PMID 28651935. Author accepted manuscript (Oxford ORA, https://ora.ox.ac.uk/objects/uuid:1661c44e-5850-4683-bc4d-bb9e50559da6), Table 2.
+- Values: age <40 0, 40-69 1, >70 2; gender female 0, male 1; previous LGIB admission 1; DRE blood 1; heart rate <70 0, 70-89 1, 90-109 2, >110 3; SBP 50-89 5, 90-119 4, 120-129 3, 130-159 2, >160 0; haemoglobin 36-69 22, 70-89 17, 90-109 13, 110-129 8, 130-159 4, >160 0. Text: "The score ranges from 3-33"; "A patient scoring ≤8 points at presentation has a 95% chance of safe discharge".
+- Edge policy (code): consecutive half-open bands (70 y → 2, HR 110 → 3, SBP/Hb 160 → 0); Hb taken as g/L (Methods says g/dL; numbers are g/L); SBP < 50 and Hb < 36 refused.
+- Route: author manuscript via the DOI (route 3), pdftotext (research agent), 2026-11-12.

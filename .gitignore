@@ -1,0 +1,22 @@
+_delete/
+.env
+.env.*
+!.env.example
+*.test
+*.out
+/bin/
+.DS_Store
+.claude/
+
+# raw benchmark and test output in work folders
+doc/**/out/
+
+# papers dropped in for porting (not ours to publish)
+doc/**/papers/
+
+# Playwright check tooling (testing/web has its own package.json)
+testing/web/node_modules/
+testing/web/test-results/
+*.swp
+/tmp/
+doc/**/checks/scratch/*.out

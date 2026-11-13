@@ -1,0 +1,5 @@
+# wast → MED-SCALE-013 WASTScore (PORTED-SECONDARY; no cut-off)
+- Primary: Brown JB, Lent B, Brett PJ, Sas G, Pederson LL. Fam Med. 1996;28(6):422-428. PMID 8791071 (not open).
+- Guideline: Basile KC, Hertz MF, Back SE. IPV and SV Victimization Assessment Instruments for Use in Healthcare Settings, v1. CDC/NCIPC; 2007. https://stacks.cdc.gov/view/cdc/44660, pp. 72–74: 8 items (tension, difficulty, then Often/Sometimes/Never); "Recode responses to reflect a higher score for higher reported frequency of experiences and sum the WAST scores for individuals who answered all 8 items." No 8-item cut-off. WAST-Short: 0–2, cut-off 1 (not built).
+- Secondary: Aydemir A, Aksoy İ, Şahin E, et al. BMC Womens Health. 2026;26(1):485. doi:10.1186/s12905-026-04663-0, PMID 42415006, PMC13629004: items scored "1 (often) to 3 (never)", reversed. Cites Brown 1996. Range 8–24 also Al Ubaidi 2021 PMC8483099 (its cut-off 13 has no traceable source).
+- Route: CDC Stacks PDF (pdftotext) + Europe PMC XML (research agent), 2026-11-12.

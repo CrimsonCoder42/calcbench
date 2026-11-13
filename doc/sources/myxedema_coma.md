@@ -1,0 +1,6 @@
+# myxedema_coma → MED-ENDO-028 MyxedemaComaScore (PORTED-SECONDARY; cut-off bands NEEDS PDF)
+- Primary: Popoveniuc G, Chandra T, Sud A, et al. Endocr Pract. 2014;20(8):808-817. doi:10.4158/EP13460.OR, PMID 24518183 (not open). Abstract: "A score ≥60 … is potentially diagnostic for MC, whereas scores between 45 and 59 could classify patients at risk for MC".
+- Secondary 1: Çetin K, Donbaloğlu Z, Bahar YF, et al. Turk Arch Pediatr. 2025;60(5):474-482. doi:10.5152/TurkArchPediatr.2025.25061, PMID 40959820, PMC12432182. Secondary 2: Amin MS, Pabani UK, Lohano S, Khan Z. Cureus. 2023;15(8):e43574. doi:10.7759/cureus.43574, PMID 37719600, PMC10503452. Both cite Popoveniuc 2014.
+- Values (identical in both): temperature >35 °C 0, 32–35 10, <32 20; CNS absent 0, somnolent/lethargy 10, obtunded 15, stupor 20, coma/seizures 30; GI absent 0, anorexia/abdominal pain/constipation 5, decreased intestinal motility 15, paralytic ileus 20; precipitating event 10; bradycardia absent 0, 50–59 10, 40–49 20, <40 30; other EKG changes 10; pericardial/pleural effusion 10; pulmonary edema 15; cardiomegaly 15; hypotension 20; hyponatremia, hypoglycemia, hypoxemia, hypercarbia, decrease in GFR 10 each.
+- Not built: bands — secondaries 25–59 vs primary abstract 45–59.
+- Route: Europe PMC fullTextXML (research agent), 2026-11-12.

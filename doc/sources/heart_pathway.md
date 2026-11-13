@@ -1,0 +1,4 @@
+# heart_pathway → MED-CARDIO-057 HEARTScore, MED-CARDIO-058 HEARTPathwayLowRisk
+- Citation: Mahler SA, Riley RF, Hiestand BC, et al. Circ Cardiovasc Qual Outcomes. 2015;8(2):195-203. doi:10.1161/CIRCOUTCOMES.114.001384. PMID 25737484. PMC4413911. Second: Six AJ, Backus BE, Kelder JC. Neth Heart J. 2008;16(6):191-196. doi:10.1007/BF03086144. PMID 18665203. PMC2442661.
+- Mahler Table 2: age <45 0, 45–65 1, >65 2; risk factors 0 / 1–2 / ≥3; troponin negative / 1–3× / >3× normal limit; history slightly/moderately/highly suspicious; ECG normal / nonspecific / consistent with ACS. Low risk: "HEART score of 0–3 and negative troponin results", troponin "at 0 and 3 hours after ED presentation". Six 2008 Table 1 prints troponin ">2x"/"1-2x" and age "45-65"/"≥65" (overlap at 65); Mahler's version used.
+- Route: PMC article pages, read 2026-11-12.

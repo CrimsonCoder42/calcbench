@@ -1,0 +1,4 @@
+# phoenix_sepsis → MED-CRIT-017 PhoenixSepsisScore
+- Citation: Schlapbach LJ, Watson RS, Sorce LR, et al. JAMA. 2024;331(8):665-674. doi:10.1001/jama.2024.0179. PMID 38245889. PMC10900966.
+- Respiratory: 0 PaO2:FiO2 ≥400 or SpO2:FiO2 ≥292; 1 PF <400 or SF <292 on any respiratory support; 2 PF 100–200 or SF 148–220 and IMV; 3 PF <100 or SF <148 and IMV (SF only if SpO2 ≤97%). Cardiovascular (0–6): vasoactives 1 → 1, ≥2 → 2; lactate 5–10.9 → 1, ≥11 → 2; MAP (1 pt / 2 pt): <1 mo 17–30 / <17; 1–11 mo 25–38 / <25; 1 to <2 y 31–43 / <31; 2 to <5 y 32–44 / <32; 5 to <12 y 36–48 / <36; 12–17 y 38–51 / <38. Coagulation (1 each, max 2): platelets <100 ×10³/µL; INR >1.3; D-dimer >2 mg/L FEU; fibrinogen <100 mg/dL. Neurological: GCS ≤10 → 1; fixed pupils bilaterally → 2.
+- "Sepsis: Suspected infection and Phoenix Sepsis Score ≥2 points"; "Septic shock: Sepsis with ≥1 cardiovascular point(s)". Route: PMC article page, read 2026-11-12.

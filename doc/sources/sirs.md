@@ -1,0 +1,4 @@
+# sirs (and sirs_calc) → MED-CRIT-013 SIRSCriteria (PORTED-SECONDARY)
+- Primary (not opened): Bone RC, Balk RA, Cerra FB, et al. Chest. 1992;101(6):1644-1655. doi:10.1378/chest.101.6.1644. PMID 1303622.
+- Secondary 1: Singer M, et al. JAMA. 2016;315(8):801-810. PMID 26903338. PMC4968574, Box 1 "SIRS": "Two or more of: Temperature >38°C or <36°C; Heart rate >90/min; Respiratory rate >20/min or PaCO2 <32 mm Hg (4.3 kPa); White blood cell count >12 000/mm3 or <4000/mm3 or >10% immature bands" ("From Bone et al").
+- Secondary 2: Balk RA. Virulence. 2014;5(1):20-26. PMID 24280933. PMC3916374: the 1991 ACCP/SCCM criteria, 2 of 4: ">38 °C or <36 °C"; ">90 bpm"; ">20 bpm or PaCO2 <32 mmHg"; ">12 000 mm³, <4000 mm³, or >10% immature (band) forms" (cites Bone 1992). Route: Europe PMC / PMC pages, read 2026-11-12.

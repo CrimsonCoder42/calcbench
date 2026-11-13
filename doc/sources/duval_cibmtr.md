@@ -1,0 +1,5 @@
+# duval_cibmtr → MED-HEMAT-011 DuvalCIBMTRScore
+- Citation: Duval M, Klein JP, He W, et al. Hematopoietic stem-cell transplantation for acute leukemia in relapse or primary induction failure. J Clin Oncol. 2010;28(23):3730-3738. doi:10.1200/JCO.2010.28.8852, PMID 20625136, PMC2917308.
+- Locator: Table 5 "Scoring System for Post-HSCT Outcome in AML and ALL", AML section; abstract "predictive score of 0 had 42% OS at 3 years, whereas OS was 6% for a score ≥ 3".
+- Transcribed (AML): Disease group "PIF or duration of first CR > 6 months" 0, "Duration of first CR < 6 months" 1; cytogenetics before HSCT good or intermediate 0, poor 1; HLA match group "HLA identical sibling or well matched or partially matched unrelated" 0, "Mismatched unrelated" 1, "Related other than HLA identical sibling" 2; circulating blasts absent 0, present 1; Karnofsky or Lansky 90–100 0, < 90 1. Score groups 0 (763 persons), 1 (374), …; 3-year OS only stated for 0 (42%) and ≥ 3 (6%).
+- Route: PMC full text (pmc.ncbi.nlm.nih.gov/articles/PMC2917308/), two readings of Table 5 agreeing; eutils efetch db=pmc gave abstract only (publisher blocks XML). Read 2026-11-12.

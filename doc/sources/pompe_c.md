@@ -1,0 +1,5 @@
+# pompe_c → MED-RESP-037 POMPECMortalityPercent, MED-RESP-038 POMPECMortalityPercentKg (PORTED)
+- Citation: Kline JA, Roy PM, Than MP, et al. Thromb Res. 2012;129(5):e194-e199. doi:10.1016/j.thromres.2012.03.015. PMID 22475313, PMC3350789.
+- Locator: Table 2 and the printed equation: "P = 100 * (1 - 1 / (1 + Exp(3.718 + DNR*1.551 + RespDist*0.800 + ULS*0.734 + AMS*1.473 + HR + (RR*0.044) + (Sao2*-0.063) + (bodyweight * -0.012))))".
+- Table 2 rows (as printed; coefficient column shifted one row against the OR column): Intercept 3.718; weight (lb) OR 0.99; highest RR OR 1.05; SaO2 OR 0.94; HR >99 OR 2.8; AMS OR 4.36; respiratory distress OR 2.22; DNR OR 4.72; unilateral limb swelling OR 2.08; coefficients printed 1.551, 0.7996, 0.734, 1.473, 1.027, 0.044, −0.063, −0.0116. Matching ln(OR): HR = 1.027 (ln 2.8 = 1.030), AMS 1.473 (ln 4.36), DNR 1.551 (ln 4.72), RespDist 0.7996 (ln 2.22), ULS 0.734 (ln 2.08), RR 0.044, SaO2 −0.063, weight −0.0116. The equation omits the HR coefficient; 1.027 used. Equation values used elsewhere (0.800, −0.012).
+- Route: PMC article page. Read 2026-11-12.

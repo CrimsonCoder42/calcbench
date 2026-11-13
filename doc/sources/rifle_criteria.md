@@ -1,0 +1,4 @@
+# rifle_criteria → MED-RENAL-025 RIFLEClassify, MED-RENAL-026 RIFLEClassifySI (PORTED-SECONDARY)
+- Primary: Bellomo R, et al. Crit Care. 2004;8(4):R204-R212. doi:10.1186/cc2872. PMID 15312219. PMC522841 (read): Loss = RRT > 4 weeks; ESRD = dialysis > 3 months; Failure also when SCr > 4.0 mg/dL (350 µmol/L) "in the setting of an acute increase of at least 0.5 mg/dl (44 μmol/l)"; "The criteria that lead to the worst possible classification should be used". Other thresholds in the Figure 1 image only.
+- Hoste 2006 (PMID 16696865, PMC1550961) Table 1 and Wlodzimirow 2012 (PMID 23078781, PMC3682302): Risk SCr ×1.5 (≥1.5×) or UO < 0.5 mL/kg/h × 6 h; Injury ×2 or < 0.5 × 12 h; Failure ×3 or < 0.3 × 24 h or anuria × 12 h; Loss > 4 weeks; ESKD > 3 months.
+- Not built: GFR decrease > 25/50/75% (one secondary, Englberger 2011 PMC3222049). SI ÷ 88.4. Route: PMC / Europe PMC, read 2026-11-12.

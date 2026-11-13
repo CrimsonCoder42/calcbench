@@ -1,0 +1,4 @@
+# bacterial_meningitis_score → MED-PEDS-007 (PORTED, 2026-11-12, builder W3-B9a)
+Primary: Nigrovic LE, Kuppermann N, Malley R. Pediatrics. 2002;110(4):712-719. doi:10.1542/peds.110.4.712. PMID 12359784, abstract: predictors "Gram stain of cerebrospinal fluid (CSF) showing bacteria, CSF protein ≥80 mg/dL, peripheral absolute neutrophil count ≥10,000 cells/mm3, seizure before or at time of presentation, and CSF absolute neutrophil count ≥1000 cells/mm3"; "attributing 2 points for a positive Gram stain and 1 point for each of the other variables"; population 29 days–19 years.
+Validation: Nigrovic LE, Kuppermann N, Macias CG, et al. JAMA. 2007;297(1):52-60. doi:10.1001/jama.297.1.52. PMID 17200475, abstract: CSF pleocytosis "≥10 cells/µL", ages 29 days–19 years, "very low (0.1%) in patients with none of the criteria".
+Agreeing secondary: Lee J, et al. Korean J Pediatr 2015, PMC4543184 ("ranges from 0 to 6 points"). Route: PubMed efetch abstracts.

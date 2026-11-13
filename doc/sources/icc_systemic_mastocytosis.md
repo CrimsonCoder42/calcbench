@@ -1,0 +1,5 @@
+# icc_systemic_mastocytosis → MED-HEMAT-013 ICCSystemicMastocytosis
+- Citation: Arber DA, Orazi A, Hasserjian RP, et al. International Consensus Classification of Myeloid Neoplasms and Acute Leukemias. Blood. 2022;140(11):1200-1228. doi:10.1182/blood.2022015850, PMID 35767897, PMC9479031 (the entry's primary, Leguit 2023 Virchows Arch PMID 36214901, is not open; Arber 2022 is the ICC's own paper and the entry's second citation).
+- Locator: Table 11 (systemic mastocytosis).
+- Transcribed: Major "Multifocal dense infiltrates of tryptase- and/or CD117 positive mast cells (≥15 mast cells in aggregates) detected in sections of bone marrow and/or other extracutaneous organ(s)". "In the absence of the major criterion, at least 3 of the following 4 minor criteria must be present": > 25% spindle shaped or atypical immature; CD25, CD2 and/or CD30; KIT D816V or other activating KIT mutation; "Elevated serum tryptase level, persistently >20 ng/mL. In cases of SM-AMN an elevated tryptase does not count as a SM minor criterion."
+- Route: PMC full text (pmc.ncbi.nlm.nih.gov/articles/PMC9479031/), Table 11 read verbatim. Read 2026-11-12.

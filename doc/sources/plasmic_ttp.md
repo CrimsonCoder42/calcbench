@@ -1,0 +1,5 @@
+# plasmic_ttp → MED-HEMAT-019 PLASMICScore, MED-HEMAT-020 PLASMICRiskGroup (PORTED-SECONDARY)
+- Primary: Bendapudi PK, Hurwitz S, Fry A, et al. Lancet Haematol. 2017;4(4):e157-e164. doi:10.1016/S2352-3026(17)30026-1, PMID 28259520 (not open).
+- Secondary 1: Singh R, Khouri A, Lee HJ, et al. Blood Vessel Thromb Hemost. 2026;3(2):100163. doi:10.1016/j.bvth.2026.100163, PMID 42164818, PMC13185983, Table 1: platelets <30 ×10⁹/L; hemolysis (reticulocytes >2.5 %, or haptoglobin undetectable, or indirect bilirubin >2.0 mg/dL); no active cancer; no solid organ or stem cell transplant; MCV <90 fL; INR <1.5; creatinine <2.0 mg/dL; 1 point each, 0–7.
+- Secondary 2: Lee CH, Huang YC, Li SS, et al. Front Med. 2022;9:893273. doi:10.3389/fmed.2022.893273, PMID 35615090, PMC9124890: "Scores 0–4 … low risk; score 5 … intermediate risk; scores 6–7 … high risk". Baysal 2023 Turk J Haematol 40(4):251-257 (PMC10701326) gives the same groups. All cite Bendapudi 2017.
+- Route: Europe PMC fullTextXML (research agent), 2026-11-12.

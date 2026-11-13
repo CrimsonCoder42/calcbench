@@ -1,0 +1,1339 @@
+[
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "Mortgage Calculator",
+  "url": "https://www.calculator.net/mortgage-calculator.html",
+  "match": "HAVE FIN-LOAN-001, FIN-LOAN-007, FIN-INT-018"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "Amortization Calculator",
+  "url": "https://www.calculator.net/amortization-calculator.html",
+  "match": "HAVE FIN-LOAN-001"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "Mortgage Payoff Calculator",
+  "url": "https://www.calculator.net/mortgage-payoff-calculator.html",
+  "match": "HAVE FIN-LOAN-005, FIN-LOAN-002"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "House Affordability Calculator",
+  "url": "https://www.calculator.net/house-affordability-calculator.html",
+  "match": "PARTIAL FIN-LOAN-010, FIN-LOAN-009 (DTI limits are lender policy, not a formula)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "Rent Calculator",
+  "url": "https://www.calculator.net/rent-calculator.html",
+  "match": "PARTIAL FIN-LOAN-009 (rent-to-income rule of thumb only)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "Debt-to-Income Ratio Calculator",
+  "url": "https://www.calculator.net/debt-ratio-calculator.html",
+  "match": "HAVE FIN-LOAN-009"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "Real Estate Calculator",
+  "url": "https://www.calculator.net/real-estate-calculator.html",
+  "match": "PARTIAL FIN-LOAN-001, FIN-INT-018 (points and closing costs not modelled)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "Refinance Calculator",
+  "url": "https://www.calculator.net/refinance-calculator.html",
+  "match": "PARTIAL FIN-LOAN-002, FIN-INT-018 (no refinance break-even comparison)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "Rental Property Calculator",
+  "url": "https://www.calculator.net/rental-property-calculator.html",
+  "match": "PARTIAL FIN-INT-039, FIN-INT-038 (no cap rate or cash-on-cash return)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "APR Calculator",
+  "url": "https://www.calculator.net/apr-calculator.html",
+  "match": "HAVE FIN-INT-032"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "FHA Loan Calculator",
+  "url": "https://www.calculator.net/fha-loan-calculator.html",
+  "match": "OUT OF SCOPE (US FHA mortgage-insurance rate tables)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "VA Mortgage Calculator",
+  "url": "https://www.calculator.net/va-mortgage-calculator.html",
+  "match": "OUT OF SCOPE (US VA funding-fee tables)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "Home Equity Loan Calculator",
+  "url": "https://www.calculator.net/home-equity-loan-calculator.html",
+  "match": "PARTIAL FIN-LOAN-006, FIN-INT-018 (CLTV cap is lender policy)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "HELOC Calculator",
+  "url": "https://www.calculator.net/heloc-calculator.html",
+  "match": "PARTIAL FIN-INT-018 (draw/interest-only then repayment phases not modelled)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "Down Payment Calculator",
+  "url": "https://www.calculator.net/down-payment-calculator.html",
+  "match": "PARTIAL FIN-LOAN-006, FIN-LOAN-010"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Mortgage and Real Estate",
+  "name": "Rent vs. Buy Calculator",
+  "url": "https://www.calculator.net/rent-vs-buy-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Auto",
+  "name": "Auto Loan Calculator",
+  "url": "https://www.calculator.net/auto-loan-calculator.html",
+  "match": "PARTIAL FIN-INT-018, FIN-LOAN-001 (trade-in, fees, sales tax not modelled)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Auto",
+  "name": "Cash Back or Low Interest Calculator",
+  "url": "https://www.calculator.net/cash-back-or-low-interest-calculator.html",
+  "match": "PARTIAL FIN-INT-018 (offer comparison not modelled)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Auto",
+  "name": "Auto Lease Calculator",
+  "url": "https://www.calculator.net/auto-lease-calculator.html",
+  "match": "NONE (money factor / residual lease payment)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "Interest Calculator",
+  "url": "https://www.calculator.net/interest-calculator.html",
+  "match": "HAVE FIN-INT-001, FIN-INT-014"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "Investment Calculator",
+  "url": "https://www.calculator.net/investment-calculator.html",
+  "match": "PARTIAL FIN-INT-001, FIN-INT-014, FIN-INT-040 (solve-for-any-variable wrapper not built)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "Finance Calculator",
+  "url": "https://www.calculator.net/finance-calculator.html",
+  "match": "PARTIAL FIN-INT-001, FIN-INT-002, FIN-INT-016, FIN-INT-018, FIN-INT-042 (no number-of-periods solver)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "Compound Interest Calculator",
+  "url": "https://www.calculator.net/compound-interest-calculator.html",
+  "match": "HAVE FIN-INT-001, FIN-INT-029, FIN-INT-030"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "Interest Rate Calculator",
+  "url": "https://www.calculator.net/interest-rate-calculator.html",
+  "match": "HAVE FIN-INT-042"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "Savings Calculator",
+  "url": "https://www.calculator.net/savings-calculator.html",
+  "match": "HAVE FIN-INT-001, FIN-INT-014, FIN-INT-023"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "Simple Interest Calculator",
+  "url": "https://www.calculator.net/simple-interest-calculator.html",
+  "match": "HAVE FIN-INT-035"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "CD Calculator",
+  "url": "https://www.calculator.net/cd-calculator.html",
+  "match": "HAVE FIN-INT-001, FIN-INT-031"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "Bond Calculator",
+  "url": "https://www.calculator.net/bond-calculator.html",
+  "match": "HAVE FIN-INVEST-002, FIN-INVEST-003"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "Mutual Fund Calculator",
+  "url": "https://www.calculator.net/mutual-fund-calculator.html",
+  "match": "PARTIAL FIN-INT-001, FIN-INT-014 (sales loads and expense ratio not modelled)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "Average Return Calculator",
+  "url": "https://www.calculator.net/average-return-calculator.html",
+  "match": "HAVE FIN-INVEST-035, FIN-INVEST-034"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "IRR Calculator",
+  "url": "https://www.calculator.net/irr-calculator.html",
+  "match": "HAVE FIN-INT-039"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "ROI Calculator",
+  "url": "https://www.calculator.net/roi-calculator.html",
+  "match": "HAVE FIN-BIZ-033, FIN-INVEST-035"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "Payback Period Calculator",
+  "url": "https://www.calculator.net/payback-period-calculator.html",
+  "match": "HAVE FIN-INVEST-022, FIN-INVEST-023"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "Present Value Calculator",
+  "url": "https://www.calculator.net/present-value-calculator.html",
+  "match": "HAVE FIN-INT-002, FIN-INT-016"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Investment",
+  "name": "Future Value Calculator",
+  "url": "https://www.calculator.net/future-value-calculator.html",
+  "match": "HAVE FIN-INT-001, FIN-INT-014"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Retirement",
+  "name": "Retirement Calculator",
+  "url": "https://www.calculator.net/retirement-calculator.html",
+  "match": "PARTIAL FIN-INT-001, FIN-INT-014, FIN-INT-016, FIN-INT-024 (no full retirement-plan model)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Retirement",
+  "name": "401K Calculator",
+  "url": "https://www.calculator.net/401k-calculator.html",
+  "match": "OUT OF SCOPE (IRS contribution limits and match rules)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Retirement",
+  "name": "Pension Calculator",
+  "url": "https://www.calculator.net/pension-calculator.html",
+  "match": "PARTIAL FIN-INT-002, FIN-INT-016 (lump-sum vs annuity comparison not built)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Retirement",
+  "name": "Social Security Calculator",
+  "url": "https://www.calculator.net/social-security-calculator.html",
+  "match": "OUT OF SCOPE (SSA benefit tables)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Retirement",
+  "name": "Annuity Calculator",
+  "url": "https://www.calculator.net/annuity-calculator.html",
+  "match": "HAVE FIN-INT-014, FIN-INT-015"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Retirement",
+  "name": "Annuity Payout Calculator",
+  "url": "https://www.calculator.net/annuity-payout-calculator.html",
+  "match": "HAVE FIN-INT-018, FIN-INT-020"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Retirement",
+  "name": "Roth IRA Calculator",
+  "url": "https://www.calculator.net/roth-ira-calculator.html",
+  "match": "OUT OF SCOPE (IRS limits and tax rules)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Retirement",
+  "name": "IRA Calculator",
+  "url": "https://www.calculator.net/ira-calculator.html",
+  "match": "OUT OF SCOPE (IRS limits and tax rules)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Retirement",
+  "name": "RMD Calculator",
+  "url": "https://www.calculator.net/rmd-calculator.html",
+  "match": "OUT OF SCOPE (IRS life-expectancy tables)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Tax and Salary",
+  "name": "Income Tax Calculator",
+  "url": "https://www.calculator.net/tax-calculator.html",
+  "match": "OUT OF SCOPE (tax tables)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Tax and Salary",
+  "name": "Salary Calculator",
+  "url": "https://www.calculator.net/salary-calculator.html",
+  "match": "NONE (pay-period conversion)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Tax and Salary",
+  "name": "Marriage Tax Calculator",
+  "url": "https://www.calculator.net/marriage-calculator.html",
+  "match": "OUT OF SCOPE (tax tables)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Tax and Salary",
+  "name": "Estate Tax Calculator",
+  "url": "https://www.calculator.net/estate-tax-calculator.html",
+  "match": "OUT OF SCOPE (tax tables)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Tax and Salary",
+  "name": "Take-Home-Paycheck Calculator",
+  "url": "https://www.calculator.net/take-home-pay-calculator.html",
+  "match": "OUT OF SCOPE (tax tables)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Loan Calculator",
+  "url": "https://www.calculator.net/loan-calculator.html",
+  "match": "HAVE FIN-INT-018, FIN-INT-019, FIN-LOAN-003, FIN-LOAN-004"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Payment Calculator",
+  "url": "https://www.calculator.net/payment-calculator.html",
+  "match": "PARTIAL FIN-INT-018 (fixed-payment term solve not built)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Currency Calculator",
+  "url": "https://www.calculator.net/currency-calculator.html",
+  "match": "OUT OF SCOPE (live exchange rates)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Inflation Calculator",
+  "url": "https://www.calculator.net/inflation-calculator.html",
+  "match": "PARTIAL FIN-ECON-002 (theirs uses the BLS CPI history table)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Sales Tax Calculator",
+  "url": "https://www.calculator.net/sales-tax-calculator.html",
+  "match": "OUT OF SCOPE (jurisdiction rates)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Credit Card Calculator",
+  "url": "https://www.calculator.net/credit-card-calculator.html",
+  "match": "PARTIAL FIN-INT-018, FIN-LOAN-005 (minimum-payment rules not modelled)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Credit Cards Payoff Calculator",
+  "url": "https://www.calculator.net/credit-card-payoff-calculator.html",
+  "match": "NONE (multi-card avalanche/snowball)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Debt Payoff Calculator",
+  "url": "https://www.calculator.net/debt-payoff-calculator.html",
+  "match": "NONE (avalanche/snowball schedule)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Debt Consolidation Calculator",
+  "url": "https://www.calculator.net/debt-consolidation-calculator.html",
+  "match": "PARTIAL FIN-INT-018, FIN-INT-032 (comparison not built)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Repayment Calculator",
+  "url": "https://www.calculator.net/repayment-calculator.html",
+  "match": "HAVE FIN-INT-018, FIN-LOAN-001"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Student Loan Calculator",
+  "url": "https://www.calculator.net/student-loan-calculator.html",
+  "match": "PARTIAL FIN-INT-018 (US repayment-plan rules not modelled)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "College Cost Calculator",
+  "url": "https://www.calculator.net/college-cost-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "VAT Calculator",
+  "url": "https://www.calculator.net/vat-calculator.html",
+  "match": "OUT OF SCOPE (jurisdiction rates)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Depreciation Calculator",
+  "url": "https://www.calculator.net/depreciation-calculator.html",
+  "match": "PARTIAL FIN-BIZ-046, FIN-BIZ-047 (sum-of-years and MACRS not built)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Margin Calculator",
+  "url": "https://www.calculator.net/margin-calculator.html",
+  "match": "PARTIAL FIN-BIZ-018 (markup not built)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Discount Calculator",
+  "url": "https://www.calculator.net/discount-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Business Loan Calculator",
+  "url": "https://www.calculator.net/business-loan-calculator.html",
+  "match": "PARTIAL FIN-INT-018, FIN-INT-032 (fee handling not built)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Personal Loan Calculator",
+  "url": "https://www.calculator.net/personal-loan-calculator.html",
+  "match": "PARTIAL FIN-INT-018, FIN-LOAN-001 (origination fee not modelled)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Boat Loan Calculator",
+  "url": "https://www.calculator.net/boat-loan-calculator.html",
+  "match": "PARTIAL FIN-INT-018 (fees and sales tax not modelled)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Lease Calculator",
+  "url": "https://www.calculator.net/lease-calculator.html",
+  "match": "NONE (residual-value lease payment)"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Budget Calculator",
+  "url": "https://www.calculator.net/budget-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "financial-calculator.html",
+  "section": "Other",
+  "name": "Commission Calculator",
+  "url": "https://www.calculator.net/commission-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Fitness",
+  "name": "BMI Calculator",
+  "url": "https://www.calculator.net/bmi-calculator.html",
+  "match": "HAVE MED-ANTHRO-001, MED-ANTHRO-002, MED-ANTHRO-003"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Fitness",
+  "name": "Calorie Calculator",
+  "url": "https://www.calculator.net/calorie-calculator.html",
+  "match": "PARTIAL LIF-NUTR-001, MED-ANTHRO-010 (activity multipliers and Katch-McArdle not built)"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Fitness",
+  "name": "Body Fat Calculator",
+  "url": "https://www.calculator.net/body-fat-calculator.html",
+  "match": "PARTIAL MED-ANTHRO-008, MED-ANTHRO-011 (US Navy tape method not built)"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Fitness",
+  "name": "BMR Calculator",
+  "url": "https://www.calculator.net/bmr-calculator.html",
+  "match": "PARTIAL LIF-NUTR-001, MED-ANTHRO-010 (Katch-McArdle not built)"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Fitness",
+  "name": "Ideal Weight Calculator",
+  "url": "https://www.calculator.net/ideal-weight-calculator.html",
+  "match": "PARTIAL MED-ANTHRO-006 (Devine, Robinson, Miller, Hamwi not built)"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Fitness",
+  "name": "Pace Calculator",
+  "url": "https://www.calculator.net/pace-calculator.html",
+  "match": "HAVE LIF-FIT-009, LIF-FIT-010"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Fitness",
+  "name": "Army Body Fat Calculator",
+  "url": "https://www.calculator.net/army-body-fat-calculator.html",
+  "match": "NONE (US Army tape formula)"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Fitness",
+  "name": "Lean Body Mass Calculator",
+  "url": "https://www.calculator.net/lean-body-mass-calculator.html",
+  "match": "NONE (Boer, James, Hume)"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Fitness",
+  "name": "Healthy Weight Calculator",
+  "url": "https://www.calculator.net/healthy-weight-calculator.html",
+  "match": "PARTIAL MED-ANTHRO-001, MED-ANTHRO-003 (BMI-range inversion not built)"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Fitness",
+  "name": "Calories Burned Calculator",
+  "url": "https://www.calculator.net/calories-burned-calculator.html",
+  "match": "NONE (MET compendium)"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Fitness",
+  "name": "One Rep Max Calculator",
+  "url": "https://www.calculator.net/one-rep-max-calculator.html",
+  "match": "HAVE LIF-FIT-005, LIF-FIT-012, LIF-FIT-013, LIF-FIT-014"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Fitness",
+  "name": "Target Heart Rate Calculator",
+  "url": "https://www.calculator.net/target-heart-rate-calculator.html",
+  "match": "PARTIAL MED-CARDIO-001, MED-CARDIO-029, MED-CARDIO-030 (Karvonen zones not built)"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Pregnancy",
+  "name": "Pregnancy Calculator",
+  "url": "https://www.calculator.net/pregnancy-calculator.html",
+  "match": "PARTIAL MED-OB-001 (Naegele due date not built)"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Pregnancy",
+  "name": "Pregnancy Weight Gain Calculator",
+  "url": "https://www.calculator.net/pregnancy-weight-gain-calculator.html",
+  "match": "NONE (IOM 2009 ranges)"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Pregnancy",
+  "name": "Pregnancy Conception Calculator",
+  "url": "https://www.calculator.net/pregnancy-conception-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Pregnancy",
+  "name": "Due Date Calculator",
+  "url": "https://www.calculator.net/due-date-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Pregnancy",
+  "name": "Ovulation Calculator",
+  "url": "https://www.calculator.net/ovulation-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Pregnancy",
+  "name": "Conception Calculator",
+  "url": "https://www.calculator.net/conception-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Pregnancy",
+  "name": "Period Calculator",
+  "url": "https://www.calculator.net/period-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Other",
+  "name": "Macro Calculator",
+  "url": "https://www.calculator.net/macro-calculator.html",
+  "match": "PARTIAL LIF-NUTR-003"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Other",
+  "name": "Carbohydrate Calculator",
+  "url": "https://www.calculator.net/carbohydrate-calculator.html",
+  "match": "PARTIAL LIF-NUTR-003"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Other",
+  "name": "Protein Calculator",
+  "url": "https://www.calculator.net/protein-calculator.html",
+  "match": "HAVE LIF-NUTR-007, LIF-NUTR-005"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Other",
+  "name": "Fat Intake Calculator",
+  "url": "https://www.calculator.net/fat-intake-calculator.html",
+  "match": "PARTIAL LIF-NUTR-003"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Other",
+  "name": "TDEE Calculator",
+  "url": "https://www.calculator.net/tdee-calculator.html",
+  "match": "PARTIAL LIF-NUTR-001 (activity multiplier not built)"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Other",
+  "name": "GFR Calculator",
+  "url": "https://www.calculator.net/gfr-calculator.html",
+  "match": "HAVE MED-RENAL-001, MED-RENAL-022, MED-RENAL-007"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Other",
+  "name": "Body Type Calculator",
+  "url": "https://www.calculator.net/body-type-calculator.html",
+  "match": "OUT OF SCOPE (shape heuristic, no primary formula)"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Other",
+  "name": "Body Surface Area Calculator",
+  "url": "https://www.calculator.net/body-surface-area-calculator.html",
+  "match": "PARTIAL MED-ANTHRO-004 (Mosteller, DuBois not built)"
+ },
+ {
+  "index": "fitness-and-health-calculator.html",
+  "section": "Other",
+  "name": "BAC Calculator",
+  "url": "https://www.calculator.net/bac-calculator.html",
+  "match": "NONE (Widmark)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Scientific Calculator",
+  "url": "https://www.calculator.net/scientific-calculator.html",
+  "match": "OUT OF SCOPE (expression-evaluator UI)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Fraction Calculator",
+  "url": "https://www.calculator.net/fraction-calculator.html",
+  "match": "PARTIAL ALG-INTMTH-013, NUM-INTEG-004 (no rational-arithmetic type)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Percentage Calculator",
+  "url": "https://www.calculator.net/percent-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Random Number Generator",
+  "url": "https://www.calculator.net/random-number-generator.html",
+  "match": "OUT OF SCOPE (random generator)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Percent Error Calculator",
+  "url": "https://www.calculator.net/percent-error-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Exponent Calculator",
+  "url": "https://www.calculator.net/exponent-calculator.html",
+  "match": "NONE (stdlib math.Pow)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Binary Calculator",
+  "url": "https://www.calculator.net/binary-calculator.html",
+  "match": "NONE (stdlib strconv)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Hex Calculator",
+  "url": "https://www.calculator.net/hex-calculator.html",
+  "match": "NONE (stdlib strconv)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Half-Life Calculator",
+  "url": "https://www.calculator.net/half-life-calculator.html",
+  "match": "NONE (exponential decay)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Quadratic Formula Calculator",
+  "url": "https://www.calculator.net/quadratic-formula-calculator.html",
+  "match": "HAVE NUM-ALGEB-006, NUM-ALGEB-007, NUM-ALGEB-008"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Log Calculator",
+  "url": "https://www.calculator.net/log-calculator.html",
+  "match": "NONE (stdlib math.Log)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Ratio Calculator",
+  "url": "https://www.calculator.net/ratio-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Root Calculator",
+  "url": "https://www.calculator.net/root-calculator.html",
+  "match": "NONE (stdlib math)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Least Common Multiple Calculator",
+  "url": "https://www.calculator.net/lcm-calculator.html",
+  "match": "HAVE NUM-INTEG-005"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Greatest Common Factor Calculator",
+  "url": "https://www.calculator.net/gcf-calculator.html",
+  "match": "HAVE NUM-INTEG-004"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Factor Calculator",
+  "url": "https://www.calculator.net/factor-calculator.html",
+  "match": "PARTIAL NUM-INTEG-002 (all-divisors list not built)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Rounding Calculator",
+  "url": "https://www.calculator.net/rounding-calculator.html",
+  "match": "PARTIAL NUM-ALGEB-022 (ties-to-even only; other modes not built)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Matrix Calculator",
+  "url": "https://www.calculator.net/matrix-calculator.html",
+  "match": "HAVE NUM-LINALG-090, NUM-LINALG-097, NUM-LINALG-098, NUM-LINALG-122"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Scientific Notation Calculator",
+  "url": "https://www.calculator.net/scientific-notation-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Math",
+  "name": "Big Number Calculator",
+  "url": "https://www.calculator.net/big-number-calculator.html",
+  "match": "NONE (stdlib math/big)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Statistics",
+  "name": "Standard Deviation Calculator",
+  "url": "https://www.calculator.net/standard-deviation-calculator.html",
+  "match": "HAVE NUM-STATS-019, NUM-STATS-021, NUM-STATS-022"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Statistics",
+  "name": "Number Sequence Calculator",
+  "url": "https://www.calculator.net/number-sequence-calculator.html",
+  "match": "NONE (arithmetic/geometric/Fibonacci terms and sums)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Statistics",
+  "name": "Sample Size Calculator",
+  "url": "https://www.calculator.net/sample-size-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Statistics",
+  "name": "Probability Calculator",
+  "url": "https://www.calculator.net/probability-calculator.html",
+  "match": "HAVE NUM-PROB-002, NUM-PROB-003, NUM-PROB-005, NUM-PROB-006"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Statistics",
+  "name": "Statistics Calculator",
+  "url": "https://www.calculator.net/statistics-calculator.html",
+  "match": "HAVE NUM-STATS-001, NUM-STATS-012, NUM-STATS-018, NUM-STATS-019, NUM-STATS-024, NUM-STATS-042"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Statistics",
+  "name": "Mean, Median, Mode, Range Calculator",
+  "url": "https://www.calculator.net/mean-median-mode-range-calculator.html",
+  "match": "HAVE NUM-STATS-001, NUM-STATS-012, NUM-STATS-024, NUM-STATS-018"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Statistics",
+  "name": "Permutation and Combination Calculator",
+  "url": "https://www.calculator.net/permutation-and-combination-calculator.html",
+  "match": "HAVE NUM-COMBI-003, NUM-COMBI-005"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Statistics",
+  "name": "Z-score Calculator",
+  "url": "https://www.calculator.net/z-score-calculator.html",
+  "match": "HAVE NUM-STATS-028, NUM-PROB-048"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Statistics",
+  "name": "Confidence Interval Calculator",
+  "url": "https://www.calculator.net/confidence-interval-calculator.html",
+  "match": "PARTIAL NUM-STATS-023, NUM-PROB-061 (no interval function)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Geometry",
+  "name": "Triangle Calculator",
+  "url": "https://www.calculator.net/triangle-calculator.html",
+  "match": "HAVE NUM-TRIG-022..026, NUM-GEOM-016"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Geometry",
+  "name": "Volume Calculator",
+  "url": "https://www.calculator.net/volume-calculator.html",
+  "match": "HAVE NUM-GEOM-048, -049, -054, -058, -063, -073"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Geometry",
+  "name": "Slope Calculator",
+  "url": "https://www.calculator.net/slope-calculator.html",
+  "match": "HAVE NUM-GEOM-003, NUM-GEOM-004"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Geometry",
+  "name": "Area Calculator",
+  "url": "https://www.calculator.net/area-calculator.html",
+  "match": "HAVE NUM-GEOM-022, -025, -035, -043"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Geometry",
+  "name": "Distance Calculator",
+  "url": "https://www.calculator.net/distance-calculator.html",
+  "match": "PARTIAL NUM-GEOM-001, NUM-LINALG-019, NUM-TRIG-031 (lat/long distance on Earth not wrapped)"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Geometry",
+  "name": "Circle Calculator",
+  "url": "https://www.calculator.net/circle-calculator.html",
+  "match": "HAVE NUM-GEOM-034, NUM-GEOM-035"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Geometry",
+  "name": "Surface Area Calculator",
+  "url": "https://www.calculator.net/surface-area-calculator.html",
+  "match": "HAVE NUM-GEOM-051, -060, -064, -074"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Geometry",
+  "name": "Pythagorean Theorem Calculator",
+  "url": "https://www.calculator.net/pythagorean-theorem-calculator.html",
+  "match": "HAVE NUM-GEOM-020, NUM-GEOM-021"
+ },
+ {
+  "index": "math-calculator.html",
+  "section": "Geometry",
+  "name": "Right Triangle Calculator",
+  "url": "https://www.calculator.net/right-triangle-calculator.html",
+  "match": "HAVE NUM-TRIG-027..030"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Date and Time",
+  "name": "Age Calculator",
+  "url": "https://www.calculator.net/age-calculator.html",
+  "match": "NONE (calendar arithmetic)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Date and Time",
+  "name": "Date Calculator",
+  "url": "https://www.calculator.net/date-calculator.html",
+  "match": "NONE (calendar arithmetic)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Date and Time",
+  "name": "Time Calculator",
+  "url": "https://www.calculator.net/time-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Date and Time",
+  "name": "Hours Calculator",
+  "url": "https://www.calculator.net/hours-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Date and Time",
+  "name": "Time Card Calculator",
+  "url": "https://www.calculator.net/time-card-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Date and Time",
+  "name": "Time Zone Calculator",
+  "url": "https://www.calculator.net/time-zone-calculator.html",
+  "match": "OUT OF SCOPE (tz database)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Date and Time",
+  "name": "Time Duration Calculator",
+  "url": "https://www.calculator.net/time-duration-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Date and Time",
+  "name": "Day Counter",
+  "url": "https://www.calculator.net/day-counter.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Date and Time",
+  "name": "Day of the Week Calculator",
+  "url": "https://www.calculator.net/day-of-the-week-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Housing/Building",
+  "name": "Concrete Calculator",
+  "url": "https://www.calculator.net/concrete-calculator.html",
+  "match": "PARTIAL NUM-GEOM-022, NUM-GEOM-049 (volume only; bag yields not modelled)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Housing/Building",
+  "name": "BTU Calculator",
+  "url": "https://www.calculator.net/btu-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Housing/Building",
+  "name": "Square Footage Calculator",
+  "url": "https://www.calculator.net/square-footage-calculator.html",
+  "match": "PARTIAL NUM-GEOM-022, NUM-GEOM-035 (shape areas only)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Housing/Building",
+  "name": "Stair Calculator",
+  "url": "https://www.calculator.net/stair-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Housing/Building",
+  "name": "Roofing Calculator",
+  "url": "https://www.calculator.net/roofing-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Housing/Building",
+  "name": "Tile Calculator",
+  "url": "https://www.calculator.net/tile-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Housing/Building",
+  "name": "Mulch Calculator",
+  "url": "https://www.calculator.net/mulch-calculator.html",
+  "match": "PARTIAL NUM-GEOM-048 (volume only)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Housing/Building",
+  "name": "Gravel Calculator",
+  "url": "https://www.calculator.net/gravel-calculator.html",
+  "match": "PARTIAL NUM-GEOM-048 (volume only; material density not modelled)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Various Measurements/Units",
+  "name": "Height Calculator",
+  "url": "https://www.calculator.net/height-calculator.html",
+  "match": "NONE (child adult-height prediction)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Various Measurements/Units",
+  "name": "Conversion Calculator",
+  "url": "https://www.calculator.net/conversion-calculator.html",
+  "match": "PARTIAL UNT-LEN-001/002, UNT-MASS-001/002, UNT-TEMP-001..004 (few quantities)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Various Measurements/Units",
+  "name": "GDP Calculator",
+  "url": "https://www.calculator.net/gdp-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Various Measurements/Units",
+  "name": "Density Calculator",
+  "url": "https://www.calculator.net/density-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Various Measurements/Units",
+  "name": "Mass Calculator",
+  "url": "https://www.calculator.net/mass-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Various Measurements/Units",
+  "name": "Weight Calculator",
+  "url": "https://www.calculator.net/weight-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Various Measurements/Units",
+  "name": "Speed Calculator",
+  "url": "https://www.calculator.net/speed-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Various Measurements/Units",
+  "name": "Molarity Calculator",
+  "url": "https://www.calculator.net/molarity-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Various Measurements/Units",
+  "name": "Molecular Weight Calculator",
+  "url": "https://www.calculator.net/molecular-weight-calculator.html",
+  "match": "NONE (needs IUPAC atomic weights)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Various Measurements/Units",
+  "name": "Roman Numeral Converter",
+  "url": "https://www.calculator.net/roman-numeral-converter.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Electronics/Circuits",
+  "name": "Voltage Drop Calculator",
+  "url": "https://www.calculator.net/voltage-drop-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Electronics/Circuits",
+  "name": "Resistor Calculator",
+  "url": "https://www.calculator.net/resistor-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Electronics/Circuits",
+  "name": "Ohms Law Calculator",
+  "url": "https://www.calculator.net/ohms-law-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Electronics/Circuits",
+  "name": "Electricity Calculator",
+  "url": "https://www.calculator.net/electricity-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Internet",
+  "name": "IP Subnet Calculator",
+  "url": "https://www.calculator.net/ip-subnet-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Internet",
+  "name": "Password Generator",
+  "url": "https://www.calculator.net/password-generator.html",
+  "match": "OUT OF SCOPE (random generator)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Internet",
+  "name": "Bandwidth Calculator",
+  "url": "https://www.calculator.net/bandwidth-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Internet",
+  "name": "Base64 Encode / Decode",
+  "url": "https://www.calculator.net/base64-encode-decode.html",
+  "match": "OUT OF SCOPE (stdlib encoding, not a formula)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Internet",
+  "name": "URL Encode / Decode",
+  "url": "https://www.calculator.net/url-encode-decode.html",
+  "match": "OUT OF SCOPE (stdlib net/url, not a formula)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Everyday Utility",
+  "name": "GPA Calculator",
+  "url": "https://www.calculator.net/gpa-calculator.html",
+  "match": "PARTIAL NUM-STATS-026 (weighted mean; grade-point scale not built)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Everyday Utility",
+  "name": "Grade Calculator",
+  "url": "https://www.calculator.net/grade-calculator.html",
+  "match": "PARTIAL NUM-STATS-026 (weighted mean; final-grade solve not built)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Everyday Utility",
+  "name": "Bra Size Calculator",
+  "url": "https://www.calculator.net/bra-size-calculator.html",
+  "match": "OUT OF SCOPE (sizing tables)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Everyday Utility",
+  "name": "Shoe Size Conversion",
+  "url": "https://www.calculator.net/shoe-size-conversion.html",
+  "match": "OUT OF SCOPE (sizing tables)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Everyday Utility",
+  "name": "Tip Calculator",
+  "url": "https://www.calculator.net/tip-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Everyday Utility",
+  "name": "Golf Handicap Calculator",
+  "url": "https://www.calculator.net/golf-handicap-calculator.html",
+  "match": "NONE (WHS formula)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Everyday Utility",
+  "name": "Sleep Calculator",
+  "url": "https://www.calculator.net/sleep-calculator.html",
+  "match": "PARTIAL MED-PEDS-002 (recommended hours only; cycle timing not built)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Weather",
+  "name": "Wind Chill Calculator",
+  "url": "https://www.calculator.net/wind-chill-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Weather",
+  "name": "Heat Index Calculator",
+  "url": "https://www.calculator.net/heat-index-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Weather",
+  "name": "Dew Point Calculator",
+  "url": "https://www.calculator.net/dew-point-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Transportation",
+  "name": "Fuel Cost Calculator",
+  "url": "https://www.calculator.net/fuel-cost-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Transportation",
+  "name": "Gas Mileage Calculator",
+  "url": "https://www.calculator.net/gas-mileage-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Transportation",
+  "name": "Horsepower Calculator",
+  "url": "https://www.calculator.net/horsepower-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Transportation",
+  "name": "Engine Horsepower Calculator",
+  "url": "https://www.calculator.net/engine-horsepower-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Transportation",
+  "name": "Mileage Calculator",
+  "url": "https://www.calculator.net/mileage-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Transportation",
+  "name": "Tire Size Calculator",
+  "url": "https://www.calculator.net/tire-size-calculator.html",
+  "match": "NONE"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Entertainment/Anecdotes",
+  "name": "Dice Roller",
+  "url": "https://www.calculator.net/dice-roller.html",
+  "match": "OUT OF SCOPE (entertainment / random)"
+ },
+ {
+  "index": "other-calculator.html",
+  "section": "Entertainment/Anecdotes",
+  "name": "Love Calculator",
+  "url": "https://www.calculator.net/love-calculator.html",
+  "match": "OUT OF SCOPE (entertainment)"
+ }
+]

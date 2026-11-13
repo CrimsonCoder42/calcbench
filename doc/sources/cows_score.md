@@ -1,0 +1,5 @@
+# cows_score → MED-PSYCH-016 COWSScore, MED-PSYCH-017 COWSSeverityOf
+- Citation: Wesson DR, Ling W. The Clinical Opiate Withdrawal Scale (COWS). J Psychoactive Drugs. 2003;35(2):253-259. doi:10.1080/02791072.2003.10400007, PMID 12924748.
+- Locator: Appendix 1, read in the NIDA reprint https://nida.nih.gov/sites/default/files/ClinicalOpiateWithdrawalScale.pdf (SHA-256 4c04fc126ae8252932d55caf2a9ef0bf89df3ee5cbaa5b56bd266f260a25ebf9; the appendix page is the journal's own, 'Journal of Psychoactive Drugs Volume 35 (2)').
+- Transcribed: Pulse 0 (<=80), 1 (81-100), 2 (101-120), 4 (>120); sweating 0-4; restlessness 0,1,3,5; pupils 0,1,2,5; bone/joint aches 0,1,2,4; runny nose/tearing 0,1,2,4; GI upset 0,1,2,3,5; tremor 0,1,2,4; yawning 0,1,2,4; anxiety/irritability 0,1,2,4; gooseflesh 0,3,5. 'The total score is the sum of all 11 items'. 'Score: 5-12 = mild; 13-24 = moderate; 25-36 = moderately severe; more than 36 = severe withdrawal'.
+- Route: Guideline body PDF + pdftotext (route 4). Read 2026-11-12.

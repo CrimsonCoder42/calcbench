@@ -1,0 +1,5 @@
+# face_drops → MED-INFECT-003 FACEDROPSScore
+- Citation: McEntire CRS, Chung SY, Chang B, et al. FACE DROPS: A clinical risk assessment tool for differentiation of acute Lyme disease-associated facial palsy from Bell palsy. Neurol Clin Pract. 2025;15(3):e200476. doi:10.1212/CPJ.0000000000200476, PMID 40290705, PMC12021021.
+- Locator: Table 3 (scoring), Table 4 (cut-offs), Results.
+- Transcribed: Fever +8 "Temperature ≥100.4˚F"; Aches +6 "Arthralgia/myalgia"; Cephalalgia +3 headache "other than isolated otalgia or postauricular pain"; Exhaustion +4 "Unusual fatigue ... around time of palsy onset"; Dermatomal or radicular signs +3; Otalgia or postauricular pain −1 "ipsilateral to facial droop"; Stiff neck +3 "Nuchal rigidity". Cut-offs ≤4 (BP), 5–6, ≥7 (LDFP): "scores ≤4 predicted BP with ≥93.5% accuracy while scores of ≥7 predicted LDFP with ≥96.0% accuracy". Population 285 (209 BP, 76 LDFP), ages 9–85, Massachusetts facial nerve center 2005–2021.
+- Route: PMC full text (pmc.ncbi.nlm.nih.gov/articles/PMC12021021/). Read 2026-11-12.

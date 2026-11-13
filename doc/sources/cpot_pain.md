@@ -1,0 +1,5 @@
+# cpot_pain → MED-CRIT-012 CPOTScore (PORTED-SECONDARY)
+- Primary: Gélinas C, Fillion L, Puntillo KA, Viens C, Fortier M. Validation of the critical-care pain observation tool in adult patients. Am J Crit Care. 2006;15(4):420-427. PMID 16823021 (not open). The entry's own citation (Gélinas 2004, PMID 15043240) is the earlier retrospective study.
+- Secondary 1: Afenigus AD. Front Pain Res (Lausanne). 2024;5:1481085. doi:10.3389/fpain.2024.1481085, PMC11518793, Table 1: facial expression 0 relaxed or neutral / 1 tense / 2 grimacing; body movements 0 absence of movement or normal position / 1 protection / 2 restlessness or agitation; muscle tension 0 relaxed / 1 tense, rigid / 2 very tense or rigid; ventilator compliance 0 fully compliant / 1 coughing but tolerating / 2 fighting ventilator; total 0–8; > 2 pain.
+- Secondary 2: Asriyanto LF, Chayati N. Int J Nurs Sci. 2024;11(1):113-119. PMC10859591: four indicators 0–2 (fourth: ventilator compliance if intubated or vocalization if extubated), total 0–8, cites Gélinas 2006.
+- Route: PMC full text. Read 2026-11-12.

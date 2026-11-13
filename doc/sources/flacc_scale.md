@@ -1,0 +1,6 @@
+# flacc_scale → MED-SCALE-014 FLACCScore (med/scales/flacc_score.go) — PORTED-SECONDARY (arithmetic only; items not embedded)
+- Primary: Merkel SI, Voepel-Lewis T, Shayevitz JR, Malviya S. The FLACC: a behavioral scale for scoring postoperative pain in young children. Pediatr Nurs. 1997;23(3):293-297. PMID 9220806. Abstract read: "five categories of pain behaviors: facial expression; leg movement; activity; cry; and consolability" (no item range). Full text not open.
+- Secondary 1: Uitti JM, et al. BMC Pediatr 2018;18:392, PMC6302518: "Each of the five categories Face; Legs; Activity; Cry; Consolability is scored from 0 to 2, which results in a total score between 0 and 10". NAMES THE PRIMARY: Table 1 credit line "From Merkel SI, Voepel-Lewis T, Shayevitz JR, Malviya S. The FLACC ... Pediatr Nurs. 1997;23:293–297".
+- Secondary 2: Curtis SJ, et al. BMC Pediatr 2007;7:27, PMC1950500: each category 0–2; "Ten is the maximum score". NAMES THE PRIMARY: table credit line "Adapted from The FLACC: A behavioral scale for scoring postoperative pain in young children, by S Merkel and others, 1997, Pediatr Nurse 23(3), p. 293–297."
+- Bands (0 relaxed; 1–3; 4–6; 7–10) only in Rybojad 2022 PMC8872586 as "University of Michigan" instructions, not cited to Merkel: not built.
+- Route: Europe PMC fullTextXML ×2 + PubMed efetch abstract. Read 2026-11-12 (updated by W3-B11).

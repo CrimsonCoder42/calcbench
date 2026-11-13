@@ -1,0 +1,4 @@
+# four_peps → MED-CARDIO-064 FourPEPSScore, MED-CARDIO-065 FourPEPSLevel (PORTED)
+- Primary: Roy PM, Friou E, Germeau B, et al. Derivation and Validation of a 4-Level Clinical Pretest Probability Score for Suspected Pulmonary Embolism to Safely Decrease Imaging Testing. JAMA Cardiol. 2021;6(6):669-677. doi:10.1001/jamacardio.2021.0064, PMID 33656522, PMC7931139, Table 3.
+- Values: age <50 −2, 50-64 −1; chronic respiratory disease −1; HR <80 −1; chest pain and acute dyspnea +1; male +2; hormonal estrogenic treatment +2; personal history of VTE +2; syncope +2; immobility within last 4 weeks +2; SpO2 <95 % +3; calf pain and/or unilateral lower limb edema +3; PE most likely diagnosis +5. Levels: "Very low CPP (<0)", "Low CPP (0-5)", "Moderate CPP (6-12)", "High CPP (≥13)".
+- Route: Europe PMC fullTextXML (route 1), 2026-11-12.

@@ -1,0 +1,5 @@
+# pef_reversibility_category (W3_B9b entry 98) → MED-RESP-053
+- Citation: Global Initiative for Asthma. Global Strategy for Asthma Management and Prevention, 2023 update. https://ginasthma.org/wp-content/uploads/2023/07/GINA-2023-Full-report-23_07_06-WMS.pdf (PDF saved by WebFetch, read with pdftotext -layout 2026-11-12; SHA-256 5dbd3e84576d3c44e7988ecd85a6b3fe7381b10ddf111ce781e7041c0c70a8a0).
+- Locator: section "How much variation in expiratory airflow is consistent with asthma?": "Generally, in adults with respiratory symptoms typical of asthma, an increase or decrease in FEV1 of >12% and >200 mL from baseline, or (if spirometry is not available) a change in PEF of at least 20%, is accepted as being consistent with asthma." Box 1-2 footnote †: "For PEF, use the same meter each time, as PEF may vary by up to 20% between different meters."
+- Transcribed: |ΔPEF| ≥ 20 % of baseline; adults. (Box 1-2's BD-responsiveness row is FEV1-only: adults ">12% and >200 mL"; not ported here.) NICE NG245/NG80 pages: 403.
+- Route: GINA official PDF (route 4). Date 2026-11-12.

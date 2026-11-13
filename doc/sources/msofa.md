@@ -1,0 +1,4 @@
+# msofa → MED-CRIT-015 MSOFAScore
+- Citation: Grissom CK, Brown SM, Kuttler KG, et al. Disaster Med Public Health Prep. 2010;4(4):277-284. doi:10.1001/dmp.2010.40. PMID 21149228. PMC3811929.
+- Table 2: Respiratory SpO2/FiO2 >400 0, ≤400 1, ≤315 2, ≤235 3, ≤150 4; Liver no scleral icterus or jaundice 0, scleral icterus or jaundice 3; Cardiovascular no hypotension 0, MAP <70 1, dopamine ≤5 or dobutamine any dose 2, dopamine >5 / epinephrine ≤0.1 / norepinephrine ≤0.1 3, dopamine >15 / epinephrine >0.1 / norepinephrine >0.1 4 (µg/kg/min); CNS GCS 15 0, 13–14 1, 10–12 2, 6–9 3, <6 4; Renal creatinine <1.2 0, 1.2–1.9 1, 2.0–3.4 2, 3.5–4.9 3, >5.0 4.
+- Text: "5 organ systems are scored on a 0 to 4 scale … with a maximum score of 19" (so jaundice = 3); "the SpO2 is divided by the fraction of inspired oxygen (FIO2)". Route: PMC article page, read 2026-11-12.

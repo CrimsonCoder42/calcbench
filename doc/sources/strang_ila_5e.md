@@ -1,0 +1,13 @@
+# Strang
+
+**Citation**: Strang, *Introduction to Linear Algebra*, 5th ed., Wellesley-Cambridge Press, 2016.
+
+**Taken**: Definitions of vector operations (§1.1, §1.2), matrix products, transposes, inverses, LU (§2.4–§2.7), rank (§3.2), projections (§4.2), determinants and cofactors (§5.1–§5.3), eigenvalue trace/det relations (§6.1, §6.4), and the computer-graphics matrices of §10.6 (pp. 495–498: homogeneous translation and scaling, rotation about an axis eq. (1), projection I − nnᵀ, mirror I − 2nnᵀ).
+
+**Used by**: NUM-LINALG-001, NUM-LINALG-002, NUM-LINALG-003, NUM-LINALG-004, NUM-LINALG-005, NUM-LINALG-006, NUM-LINALG-007, NUM-LINALG-008, NUM-LINALG-011, NUM-LINALG-012, NUM-LINALG-013, NUM-LINALG-014, NUM-LINALG-015, NUM-LINALG-016, NUM-LINALG-017, NUM-LINALG-018, NUM-LINALG-019, NUM-LINALG-021, NUM-LINALG-022, NUM-LINALG-023, NUM-LINALG-024, NUM-LINALG-025, NUM-LINALG-026, NUM-LINALG-027, NUM-LINALG-028, NUM-LINALG-029, NUM-LINALG-030, NUM-LINALG-031, NUM-LINALG-032, NUM-LINALG-033, NUM-LINALG-034, NUM-LINALG-035, NUM-LINALG-036, NUM-LINALG-037, NUM-LINALG-038, NUM-LINALG-039, NUM-LINALG-045, NUM-LINALG-046, NUM-LINALG-048, NUM-LINALG-049, NUM-LINALG-050, NUM-LINALG-051, NUM-LINALG-056, NUM-LINALG-057, NUM-LINALG-058, NUM-LINALG-059, NUM-LINALG-060, NUM-LINALG-061, NUM-LINALG-062, NUM-LINALG-064, NUM-LINALG-065, NUM-LINALG-066, NUM-LINALG-067, NUM-LINALG-068, NUM-LINALG-069, NUM-LINALG-070, NUM-LINALG-071, NUM-LINALG-075, NUM-LINALG-077, NUM-LINALG-078, NUM-LINALG-079, NUM-LINALG-080, NUM-LINALG-081, NUM-LINALG-082, NUM-LINALG-083, NUM-LINALG-084, NUM-LINALG-085, NUM-LINALG-086, NUM-LINALG-087, NUM-LINALG-088, NUM-LINALG-089, NUM-LINALG-090, NUM-LINALG-091, NUM-LINALG-092, NUM-LINALG-093, NUM-LINALG-094, NUM-LINALG-095, NUM-LINALG-097, NUM-LINALG-098, NUM-LINALG-099.
+
+**Checked**: Section titles checked against the official table of contents, https://math.mit.edu/~gs/linearalgebra/ila5/indexila5.html (read 2026-11-12). §10.6 read in the sample PDF https://math.mit.edu/~gs/linearalgebra/ila5/linearalgebra5_10-6.pdf: Strang multiplies ROW vectors, so the column-vector matrices built here are his transposes; the rotation-about-an-axis test compares with the transposed eq. (1) form via Rodrigues.
+
+## Matrix gaps (2026-11-12)
+
+Sections cited (table of contents confirmed at math.mit.edu/~gs/linearalgebra/ila5, 2026-11-12): §2.2, §2.4, §2.6, §3.2, §3.3, §3.4, §3.5, §4.3 (worked example: the best line 5 − 3t through (0, 6), (1, 0), (2, 0), reproduced by LeastSquaresQR), §4.4, §5.2, §5.3, §6.1, §6.4, §6.5, ch. 7, §11.2. Used by NUM-LINALG-116…149, 151…153, 155…159, 161…166. §3.2 example A = [1 2 2 4; 3 8 6 16] → R = [1 0 2 0; 0 1 0 2] reproduced by MatRREF, MatNullSpace and MatColumnSpace.

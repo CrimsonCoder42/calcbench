@@ -1,0 +1,491 @@
+# Consumer change list (one line per ported or reused entry)
+
+Columns: entry id → calcbench ID: what the caller changes.
+
+- acr_eular_gout → MED-RHEUM-004: serum_urate 0–4 code → serumUrateMgDL value; synovial_fluid 0–2 code → synovialFluidMSUNegative bool; entry and MSU-sufficient criteria are the caller's gate
+- acr_eular_pmr → MED-RHEUM-002, MED-RHEUM-003: choose the function by whether US was done
+- acr_eular_sjogren → MED-RHEUM-001: inclusion/exclusion inputs are the caller's gate; score only
+- apgar_score → MED-SCALE-005, MED-SCALE-006: use MED-SCALE-005/006
+- centor_score → MED-INFECT-001: the McIsaac age term is gone; a McIsaac function needs its primary read (left for Devin)
+- comm_opioid_misuse → MED-PSYCH-001: pass a [17]int; domain sub-sums dropped
+- danger_assessment_domestic → MED-SCALE-008: none
+- gipss_pmf → MED-HEMAT-003, MED-HEMAT-004: karyotype code → GIPSSKaryotype; calr_type1 input inverted (point for ABSENCE of type 1/like CALR)
+- hark_ipv → MED-SCALE-007: band labels dropped; cut-off ≥1 is the caller's
+- kocher_criteria → MED-PEDS-001: esr/wbc flags → esrMmPerHour, wbcPerMm3 values; fever = history of fever
+- malt_ipi → MED-HEMAT-006, MED-HEMAT-007: ann_arbor code → stageIIIorIV bool
+- maps_score → MED-HEMAT-005: platelets_low flag → plateletsE9PerL value
+- menza_score → MED-INFECT-002: none beyond renaming
+- mysec_pm → MED-HEMAT-008: flags → hemoglobinGDL, blastsPercent, plateletsE9PerL values
+- nccn_ipi → MED-HEMAT-001, MED-HEMAT-002: age_group/ldh_ratio codes → ageYears and ldhRatioToULN values; ecog flag → ecog 0–4; extranodal = major-organ involvement
+- news2 → MED-CRIT-001, MED-CRIT-002: inputs change: temperatureC (°C) not tempF; spo2Scale→scale2 bool; supplO2→onOxygen bool; consciousness→alert bool; outputs in NEWS2Scores struct; add RedScore and NEWS2ClinicalRisk
+- opioid_risk_tool → MED-PSYCH-002: the total stays in the consumer until the item weights are read; call MED-PSYCH-002 for the band
+- pediatric_sleep_calculator → MED-PEDS-002: handle ErrOutOfRange under 4 months; compute below/above in the caller
+- riete_bleeding → MED-HEMAT-009, MED-HEMAT-010: creatinine flag → creatinineMgDL; age_75 flag → ageYears
+- scorten → MED-CRIT-003: inputs: raw values (age, HR, %BSA, urea/glucose/bicarbonate mmol/L) instead of 0/1 flags; drop rdw, hb
+- slicc_sle_2012 → MED-RHEUM-005: pass clinicalCount (of 11) and immunologicCount (of 6) and the biopsy flag (nephritis AND ANA/anti-dsDNA)
+- temp_converter → UNT-TEMP-001, UNT-TEMP-002, UNT-TEMP-003, UNT-TEMP-004: call UNT-TEMP-001 FahrenheitToCelsius; bands dropped
+- twist_score → MED-EMERG-001: none
+- dhaka_score → MED-PEDS-003, MED-PEDS-004: level codes 0–2/0–1 map to Table 3 points inside the function
+- isee_eoe → MED-GASTRO-006, MED-GASTRO-007: pass peak eos/hpf; levels as named constants
+- pediatric_appendicitis_score → MED-GASTRO-004: call PediatricAppendicitisScore; keep app bands only if a primary is found
+- relative_fat_mass → MED-ANTHRO-011: pass cm (or any same unit ×2.54); compute ratio if shown
+- ripasa → MED-GASTRO-005: call RIPASAScore; age<40 and <48 h as booleans
+- rockall_pre_endoscopy → MED-GASTRO-002: pass systolic mmHg and pulse instead of the shock picker; comorbidity/diagnosis as named levels
+- rockall_score_gi → MED-GASTRO-003: as rockall_pre_endoscopy
+- ausdrisk → MED-ENDO-008: pass age years and waist cm; background as 3 levels (SE/PI vs Asian/ATSI); app risk bands not in Box 3, not ported
+- bard_score → MED-HEPAT-005: pass BMI kg/m²; doc.go line for lead
+- basal_energy_expenditure → MED-ANTHRO-010: convert lb→kg, in→cm; drop or source TDEE factors; out-of-range refusals
+- beam_value → MED-ENDO-003: call BeAMValue
+- bisap_pancreatitis → MED-GASTRO-001: pass BUN mg/dL and age instead of the two yes/no items
+- bmi_bsa → MED-ANTHRO-001: call anthropometry.BodyMassIndexImperial; BSA stays in app
+- bs_eag → MED-CHEM-005: call chemistry.EstimatedAverageGlucose / ...MmolL
+- bs_gdm → MED-ENDO-005, MED-ENDO-006: pass all three OGTT values
+- bs_gmi → MED-ENDO-001, MED-ENDO-002: call ENDO-001; mmol/L users ENDO-002 (mmol/mol)
+- c_peptide_glucose_ratio → MED-ENDO-004: fasting branch stays in app
+- dds17 → MED-ENDO-009, MED-ENDO-010: pass ratings 1-6 (index + 1); subscales stay in app
+- dka_mpm → MED-ENDO-007: pass pH, insulin IU and glucose mmol/L numbers
+- eag_from_a1c → MED-CHEM-005: call chemistry.EstimatedAverageGlucose
+- fib4_index → MED-HEPAT-001: call hepatic.FIB4
+- meld_combined → MED-HEPAT-002: call hepatic.MELD / MELDNa / MELD3
+- must_malnutrition → MED-ANTHRO-012, MED-ANTHRO-013: pass BMI and weight-loss % instead of pre-scored pickers
+- martin_ldl → MED-CHEM-009, MED-CHEM-010: call chemistry.LDLCholesterolMartinHopkins / ...SI
+- timi_ua_nstemi → MED-CARDIO-004, MED-CARDIO-005: 7 bools → TIMIScoreUANSTEMI(ageYears, factors)
+- timi_risk_index → MED-CARDIO-006: call TIMIRiskIndex(hr, age, sbp)
+- marburg_heart_score → MED-CARDIO-007: ageSex flag → (ageYears, female)
+- interchest → MED-CARDIO-008: call INTERCHESTScore
+- oesil_syncope → MED-CARDIO-010, MED-CARDIO-011: call OESILScore(ageYears, findings)
+- rcri → MED-CARDIO-012: call RevisedCardiacRiskIndex
+- subtle_anterior_stemi → MED-CARDIO-013, MED-CARDIO-014: inputs qtc, qrs_v2, r_v4, ste60_v3 map 1:1
+- shanghai_score → MED-CARDIO-015: ECG item as an enum; history/family as bools
+- tisdale_qt → MED-CARDIO-016, MED-CARDIO-017: drug count int instead of two flags
+- lace_index → MED-CARDIO-018: Charlson score is an input
+- chads2_score → MED-CARDIO-019, MED-CARDIO-020: age75 flag → ageYears (65–95)
+- atria_bleeding → MED-CARDIO-021, MED-CARDIO-022: call ATRIABleedingScore
+- atria_stroke → MED-CARDIO-023, MED-CARDIO-024: call ATRIAStrokeScore
+- orbit_bleeding → MED-CARDIO-025, MED-CARDIO-026: call ORBITBleedingScore
+- dapt_score → MED-CARDIO-027: call DAPTScore
+- hrr1 → MED-CARDIO-028: call HeartRateRecovery1Min; bands of the app (Elite…) are not the source's
+- max_hr → MED-CARDIO-001, MED-CARDIO-029, MED-CARDIO-030: call the three functions; drop "recommended"
+- acef_ii_cardiac → MED-CARDIO-034: inputs age, EF, creatinine, emergency, HCT
+- ie_mortality → MED-CARDIO-035: call IEMortalityScore
+- gillmore_attr_cm → MED-CARDIO-036: call GillmoreATTRStage
+- cardiac_power_output → MED-CARDIO-031: MAP must be supplied, not estimated
+- diastolic_shock_index → MED-CARDIO-032: call DiastolicShockIndex
+- rasi → MED-CARDIO-033: call RespiratoryAdjustedShockIndex
+- sipa → MED-CARDIO-037: caller compares its SI with SIPACutoff(age)
+- dutch_criteria_fh → MED-CARDIO-038, MED-CARDIO-039: LDL value → band chosen by caller
+- wells_pe → MED-CARDIO-040: 7 flags map 1:1; result is float (half points)
+- geneva_revised_pe → MED-CARDIO-041: heart rate and age as numbers
+- age_adjusted_ddimer → MED-CARDIO-042: call DDimerAgeAdjustedCutoffUgL
+- herdoo2 → MED-CARDIO-043: returns the count; the "0 or 1, women only" rule is the caller's
+- impede_vte → MED-CARDIO-044: dexamethasone and prophylaxis as enums; BMI as a number
+- trip_cast → MED-CARDIO-045: trauma/immobilisation enums; age and BMI as numbers
+- airq_asthma → MED-RESP-004, MED-RESP-005: pass answers as [10]bool in instrument order; impairment/risk sub-scores no longer returned
+- berlin_ards → MED-RESP-014: pass P/F (PaO2FiO2Ratio, FiO2 as fraction); timing, opacities, origin, PEEP checks stay with the caller
+- curb65_calc → MED-RESP-011: source takes BUN mg/dL: consumer converts BUN to serum urea mmol/L before calling (factor not ported: needs a cited source)
+- delta_p → MED-RESP-006: pass a DeltaPFindings struct; bands stay in consumer or are dropped
+- mulbsta_viral_pneumonia → MED-RESP-020: source passes 0/1 flags; consumer passes lymphocyte count ×10⁹/L and age (thresholds now in calcbench) and smoking as MuLBSTASmoking
+- oi → MED-RESP-018: FiO2 already in % in the source: no change
+- osi → MED-RESP-019: SpO2 > 97 % now refused (ErrOutOfRange)
+- oxygenation_index → MED-RESP-018: use OxygenationIndex
+- pack_years → MED-RESP-007, MED-RESP-008: consumer computes yearsSmoked = stopped − started − nonsmoking; cigarettes/day = packs × 20 stays in consumer or use PackYearsFromCigarettes; source bands (Light/Moderate/Heavy) have no primary → dropped
+- pe_sard → MED-RESP-021, MED-RESP-022: source passes 0/1 flags; consumer passes Hb g/dL and GFR mL/min
+- pf_ratio → MED-RESP-013: source FiO2 is in %: consumer divides by 100 (FiO2 fraction 0.21–1.0)
+- piro_cap → MED-RESP-023, MED-RESP-024: consumer passes age in years instead of an age>70 flag
+- rox_calc → MED-RESP-012: source FiO2 in %: consumer divides by 100
+- rox_index → MED-RESP-012: FiO2 already a fraction: no change
+- rsbi_calc → MED-RESP-017: source VT is mL: consumer divides by 1000 (VT in L, result breaths/min/L)
+- scarf_score → MED-RESP-025: consumer passes RR and pain score (0–10) instead of flags
+- sf_ratio → MED-RESP-015: FiO2 % → fraction; SpO2 > 97 refused
+- six_minute_walk → MED-RESP-002, MED-RESP-003: LLN stays in consumer until seen; consumer rounds for display
+- spo2_classify → MED-RESP-009, MED-RESP-010: consumer must pass onOxygen for Scale 2; neonatal 'condition 2' has no NEWS2 basis (Scale 1 used, as the source does)
+- spo2_fio2_ratio → MED-RESP-015, MED-RESP-016: FiO2 % → fraction; SpO2 > 97 % refused (source allowed 50–100)
+- abc2_ich → MED-NEURO-001: A, B, C in cm (C = slices × thickness, caller computes); result mL
+- abcd2_tia → MED-NEURO-002, MED-NEURO-003: bp_elevated → bpAtLeast140Over90 bool; clinical 0–2 code → two bools; duration 0–2 code → durationMinutes; age from years
+- cp_sss → MED-NEURO-004: takes the four NIHSS item scores
+- crafft → MED-PSYCH-007: pass the six CRAFFT answers; Part-A gate and the ≥2 cut-off are the caller's; bands "Low/Medium/High Risk" not in primary
+- dragon_score → MED-NEURO-005: signs as two bools; age, glucose (mmol/L), OTT minutes, NIHSS as values
+- fast_ed → MED-NEURO-009: item points as Table 1
+- four_at_delirium → MED-NEURO-015: pass the 4AT total; labels are the paper's band wording
+- gad7 → MED-PSYCH-003, MED-PSYCH-004: map label "Minimal Anxiety" → GAD7BelowMild ("")
+- gcs_pupils → MED-NEURO-013: GCS total from MED-SCALE-003
+- glasgow_coma_scale → MED-SCALE-003, MED-SCALE-004: use MED-SCALE-003/004
+- ich_score → MED-NEURO-006: GCS total, age, volume mL as values
+- ort_oud → MED-PSYCH-006: pass the nine answers; ≥3 cut-off is the caller's
+- pc_ptsd5 → MED-PSYCH-005: pass exposure + five answers
+- pre_score_stroke → MED-NEURO-011: age, NIHSS, ASPECTS as values
+- race_scale_stroke → MED-NEURO-010: item scores as ints
+- revised_tokuhashi → MED-NEURO-014: pass the total
+- sedan_score → MED-NEURO-007: glucose mmol/L
+- sich_score → MED-NEURO-008: age as completed years (int)
+- two_helps2b → MED-NEURO-012: six findings as bools
+- abc_massive_transfusion → MED-TRAUMA-001: sbpLow/hrHigh 0/1 → systolicMmHg, heartRatePerMin values
+- canadian_cspine → MED-TRAUMA-002: age65 0/1 → ageYears value
+- nexus_chest → MED-TRAUMA-003: age_60 0/1 → ageYears value
+- nexus_chest_ct → MED-TRAUMA-004: none
+- nexus_cspine → MED-TRAUMA-005: none
+- nts → MED-TRAUMA-006: use NTS (or TriageNTS for the unweighted sum, which also adds the codes unweighted)
+- ottawa_ankle_rule → MED-TRAUMA-007: the app's rule is the 1993 form; to match it the 1993 paper must be read (LEFT FOR DEVIN)
+- ottawa_knee_rule → MED-TRAUMA-008: age_55 0/1 → ageYears value
+- pecarn_iai → MED-TRAUMA-009: gcs_low 0/1 → gcs value
+- pedsrc → MED-TRAUMA-010: ast 0/1 → astUL value
+- pittsburgh_knee → MED-TRAUMA-011: age_under_12/age_over_50 → ageYears value
+- rib_score → MED-TRAUMA-012: none
+- tash_score → MED-TRAUMA-013: pelvicFracture/femurFracture → longBoneOrPelvicFractureAIS; Hb/BE/SBP pickers → values
+- wisconsin_criteria → MED-TRAUMA-014: gcs_low 0/1 → gcs value
+- akin_classification → MED-RENAL-012: creatinine/urine_output pickers → baseline and current creatinine, urine output rate and duration
+- cockcroft_gault → MED-RENAL-005, MED-RENAL-006: call CreatinineClearanceCockcroftGault (weight in kg; the app's height input is not part of the primary)
+- fe_urea → MED-RENAL-010: call FractionalExcretionUrea
+- fena → MED-RENAL-009: call FractionalExcretionSodium
+- revised_schwartz_gfr → MED-RENAL-007, MED-RENAL-008: call EGFRSchwartzBedside with heightCm (app converts inches × 2.54 inline)
+- stone_score → MED-RENAL-013, MED-RENAL-014: duration picker → painDurationHours; race input needed; nausea codes → STONENauseaVomiting; app likelihood strings have no primary
+- upee → MED-RENAL-015: output is the ratio (mg/mg), not g/day
+- urine_anion_gap → MED-RENAL-016: none
+- atlas_score → MED-CRIT-004: category pickers → ageYears, leukocytesPerUL, albuminGL, creatinineUmolL values
+- mascc_febrile_neutropenia → MED-CRIT-005: burden 0–2 picker → MASCCBurden constants (order differs: app 2 = mild)
+- news → MED-CRIT-001: call NEWS2 with scale2 = false, alert = (consciousness == Alert); temperature in °C (app converts °F inline)
+- nlr_calculator → MED-CRIT-006: none (bands stay in the app)
+- pecarn_febrile_infant → MED-CRIT-007: thresholds change to 4090 / 1.71 (or Devin cites the source of 4000 / 0.5)
+- qsofa → MED-CRIT-008: gcs → alteredMentation bool (GCS < 15 is the app's reading; not in the abstract)
+- qsofa_calc → MED-CRIT-008: call QSOFAScore
+- rochester_criteria → MED-CRIT-009: twelve 0/1 items → bools + WBC, bands, urine and stool counts; born_term/no_perinatal_abx/... fold into PreviouslyHealthy
+- shapiro_rule → MED-CRIT-010: add neutrophil% > 80 input; point total has no primary
+- sic_score → MED-CRIT-011: sofa input must be the four-item sum (resp, CV, hepatic, renal)
+- mifflin_st_jeor_bmr → LIF-NUTR-001, LIF-NUTR-002: sex 1/0 → female bool; weight/height bounds 20–300/100–250 dropped (abstract states none; > 0 enforced)
+- amdr_macro_grams → LIF-NUTR-003: kcal bound 500–6000 dropped (> 0); age ≥ 1 instead of ≥ 2; struct result
+- dri_protein_carbohydrate → LIF-NUTR-005: age_months same; sex → female bool; new LifeStage input; struct with IsAI flags
+- fluid_intake_ai → LIF-NUTR-004: result unit mL/day → L/day (table's unit); life_stage 0/1/2 → LifeStage
+- percent_daily_value → LIF-NUTR-006: one call (amount, DV) in the same unit instead of g/mg pairs
+- protein_per_kg → LIF-NUTR-007: weight bound and adult gate are the caller's
+- apgar_calc → MED-SCALE-005, MED-SCALE-006: use MED-SCALE-005/006 (five 0–2 signs)
+- pregnancy_dates → MED-OB-001: pass completed weeks + days; GA/EDD arithmetic stays in the app (time.Time-based port possible once a primary for the 280-day rule is read)
+- acsm_load_progression → LIF-FIT-001: call LoadProgressionACSM(load, repsOver); band "keep"/"increase" = !ConditionMet/ConditionMet
+- ipf_gl_points → LIF-FIT-002, LIF-FIT-003: call IPFGLPoints(event, female, bwKg, resultKg); men 35–39.99 kg now refused
+- rpe_rir → LIF-FIT-006: call RepsInReserve(int rpe)
+- training_load_from_1rm → LIF-FIT-007: call LoadAtPercentOneRepMax(1rm, pct)
+- volume_load → LIF-FIT-008: call VolumeLoad(reps, loadKgOrLb); the series wave's VolumeLoad (sum over sets) should call LIF-FIT-008 per set (name kept for that)
+- infant_sleep_12_to_18_months → MED-PEDS-002: call MED-PEDS-002 for the total-sleep band
+- infant_sleep_18_to_24_months → MED-PEDS-002: call MED-PEDS-002 for the total-sleep band
+- infant_sleep_24_to_36_months → MED-PEDS-002: call MED-PEDS-002 for the total-sleep band
+- infant_sleep_4_to_6_months → MED-PEDS-002: call MED-PEDS-002 for the total-sleep band
+- infant_sleep_6_to_9_months → MED-PEDS-002: call MED-PEDS-002 for the total-sleep band
+- infant_sleep_9_to_12_months → MED-PEDS-002: call MED-PEDS-002 for the total-sleep band
+- bp_pulse_pressure_variation → MED-CARDIO-046: compute ΔPP with MED-CARDIO-046; keep the 13% band in app
+- spo2_osi_category → —: call the function; inputs in the units its name states
+- spo2_oxygenation_index_category → —: call the function; inputs in the units its name states
+- spo2_pf_ratio_category → —: call the function; inputs in the units its name states
+- spo2_sf_ratio_category → —: call the function; inputs in the units its name states
+- pef_zone_personal_best → MED-RESP-026: call MED-RESP-026; zone at exactly 80% changes yellow → GREEN ZONE; labels change to the plan's
+- pulse_heart_rate_recovery → —: call the function; inputs in the units its name states
+- rr_rapid_shallow_breathing_index → —: call the function; inputs in the units its name states
+- rr_respiratory_adjusted_shock_index → —: call the function; inputs in the units its name states
+- rr_rox_index → —: call the function; inputs in the units its name states
+- temperature_oral_adult_11_to_65 → MED-THERMO-001, MED-THERMO-002: call MED-THERMO-001/002 with a core temperature; keep fever rows in app
+- temperature_oral_c_adult_11_to_65 → MED-THERMO-001, MED-THERMO-002: call MED-THERMO-001/002 with a core temperature; keep fever rows in app
+- temperature_oral_c_child_0_to_11 → MED-THERMO-001, MED-THERMO-002: call MED-THERMO-001/002 with a core temperature; keep fever rows in app
+- temperature_oral_c_older_adult_65_plus → MED-THERMO-001, MED-THERMO-002: call MED-THERMO-001/002 with a core temperature; keep fever rows in app
+- temperature_oral_child_0_to_11 → MED-THERMO-001, MED-THERMO-002: call MED-THERMO-001/002 with a core temperature; keep fever rows in app
+- temperature_oral_older_adult_65_plus → MED-THERMO-001, MED-THERMO-002: call MED-THERMO-001/002 with a core temperature; keep fever rows in app
+- bp_trend.go → —: O(n) two-pass SD → reuse
+- measurement_classifier.go → MED-ANTHRO-003: call MED-ANTHRO-003; display CDC labels
+- o2_classifier.go → MED-RESP-009, MED-RESP-010: call MED-RESP-009/010 for points
+- pef_trend.go → MED-RESP-026: call MED-RESP-026; handle the error for a missing personal best
+- pef_zone.go → MED-RESP-026: call MED-RESP-026 per reading; keep personal-best policy
+- temp_classifier.go → MED-THERMO-002: call MED-THERMO-002 with a core temperature; hypothermia edges move to 82.4/89.6 °F
+- bs_a1c_adult → MED-ENDO-013, MED-ENDO-014: `cat, err := endocrine.A1CCategoryADAPercent(a1c)`; "" replaces "normal"; age 18+ limit dropped (primary: children, adolescents and adults, nonpregnant)
+- bs_fasting_adult → MED-ENDO-015, MED-ENDO-016, MED-ENDO-021: call HypoglycemiaLevelADAMgDL first for < 70, then FastingGlucoseCategoryADAMgDL; no ≥ 300 band (app policy if kept); mmol/L twin available
+- bs_fasting_child → MED-ENDO-015, MED-ENDO-021: same calls as adults; the child-only labels go
+- bs_ogtt_2h_adult → MED-ENDO-017, MED-ENDO-018, MED-ENDO-021: 200 mg/dL now "Diabetes"; mmol/L twin available
+- bs_random_adult → MED-ENDO-019, MED-ENDO-020, MED-ENDO-021: pass the symptoms finding; bands 141/300 stay app policy or go
+- bs_random_child → MED-ENDO-019, MED-ENDO-021: as bs_random_adult
+- bs_gestational_ogtt_one_step → MED-ENDO-005, MED-ENDO-006: `met, err := endocrine.GDMThresholdIADPSGMgDL(f, h1, h2)`; per-value flags are `f >= 92` etc. at the call site if needed; a missing value is refused (ErrOutOfRange), as the JSON already does
+- bs_cgm_metrics_category → MED-ENDO-023: build CGMMetricPercents (6 fields; from MED-ENDO-011/012: TBR70 = L1+L2, TAR180 = L1+L2); TIR exactly 70 % no longer passes
+- ClassifyGlucose → MED-ENDO-015, MED-ENDO-017, MED-ENDO-021: `lvl, _ := endocrine.HypoglycemiaLevelADAMgDL(g)`; if lvl == "" call FastingGlucoseCategoryADAMgDL or OGTTTwoHourCategoryADAMgDL by stored meal timing; keys/status/detail strings stay in the app
+- LocalDays → NUM-SERIES-004: `from, to, err := series.LocalDayWindow(asOf, loc, days)`; days < 1 now ErrOutOfRange (was ErrInvalidWindow)
+- MomentsOf → NUM-STATS-001: call num/stats per statistic; CV ×100 on
+- RollingSum → NUM-SERIES-003: `tot, err := series.TrailingTimeWindowSum(pts, w)`; sums[i] = tot[i].Sum, counts[i] = tot[i].Count; w ≤ 0 now ErrOutOfRange (source looped past the end at w ≤ 0: index out of range panic)
+- TheilSenPerDay → NUM-SERIES-001, NUM-SERIES-002: `series.TheilSenSlopePerDay(pts, rand.New(rand.NewPCG(1, 2)))`; empty/one-point now ErrTooFew (same); NaN values now ErrNotFinite
+- OLSPerDay → NUM-STATS-009: x[i] = elapsed days since the first point (t.Sub(t0).Hours()/24); `_, slope, err := stats.LinearRegression(x, y)`; one-time series ErrZeroVariance (was ErrTooFew)
+- Median → NUM-STATS-012: `stats.Median(v)`; empty is ErrEmpty (source returned NaN)
+- Quantile → NUM-STATS-015: `stats.Percentile(v, q, stats.HyndmanFan7)`; empty ErrEmpty (was NaN); q outside [0,1] ErrOutOfRange (source extrapolated or indexed out of range)
+- MAD → NUM-STATS-031, NUM-STATS-012: `med, _ := stats.Median(v); mad, _ := stats.MedianAbsoluteDeviation(v)`; scaled = 1.4826·mad at the call site (or REQUEST a scaled form from num/stats)
+- MergeIntervals → ALG-INTVL-001 MergeOverlapping: `interval.MergeOverlapping([]interval.Interval[int64]{{Start: s.UnixNano(), End: e.UnixNano() + int64(gap)}})`, then End −= gap; End < Start is ErrInverted, but End == Start (empty) is now accepted — reject it at the call site if needed
+- LocalDayBuckets → NUM-SERIES-005: buckets are `{Year, Month, Day, First, End}`; points of a day = pts[b.First:b.End]; unsorted input now ErrUnsorted
+- BucketFixed → NUM-SERIES-006: Avg → Mean; stride ≤ 0 now ErrOutOfRange (source: Truncate returned t unchanged); NaN now ErrNotFinite
+- TimeInRange → MED-ENDO-011, MED-ENDO-012, NUM-STATS-008: glucose: `endocrine.TimeInRangesMgDL(g)` returns percents; generic: `stats.FrequencyDistribution(v, append([]float64{-math.MaxFloat64}, append(edges, math.MaxFloat64)...))` (empty input is ErrEmpty; unsorted edges ErrNotAscending)
+- Pace → LIF-FIT-009: `fitness.Pace(seconds, miles)` — argument order is (duration, distance), source was (miles, seconds); km or mi accepted (unit follows the distance)
+- Splits → LIF-FIT-010: DistanceSample.Miles → DistanceKmOrMi; unitMiles → unitKmOrMi in the stream's unit (km stream with 1 for km splits, instead of 0.621371 mi); ErrTooFew/ErrNotMonotonic → ErrOutOfRange
+- WeekStartOf → NUM-SERIES-007: returns local midnight time.Time instead of Date; weekday outside 0-6 now ErrOutOfRange
+- WeeklyBuckets → NUM-SERIES-008: `series.WeeklySums(pts, from, to, loc, weekStart)`; Start is a time.Time; WeekBucket.N → Count; compensated sums
+
+## Wave 2 (2026-11-12): one line per PORTED / PORTED-SECONDARY / REUSED entry, and SOURCE DOES NOT SUPPORT entries (see CONSUMER_DEFECTS.md in the wave 2 folder)
+
+- ARV → NUM-SERIES-009: ", N = number of valid measurements, k = order (same first author as the index's 2005 paper). Second: Kulkarni S, et al. J Hypertens. 2025, PMID 40084481, PMC12052075, Table 1 (same formula). The 2005 original (Mena L, et al. J Hypertens. 2005;23(3):505-511, doi:10.1097/01.hjh.0000160205.81652.5a, PMID 15716690) is not open; Melgarejo 2024 (PMC11449671) quotes a TIME-WEIGHTED form 1/Σw Σ w·\
+- C1 → NUM-PROB-066, NUM-PROB-067, NUM-PROB-068, NUM-PROB-012: `prob.PostTestProbability(prior, lr)` per finding; the prevalence and LR tables stay with the consumer
+- C10 → NUM-STATS-037: `stats.FrequencyWeightedMedian(values, counts)`; source returned 0 for no readings — now ErrZeroTotal / ErrEmpty
+- C2 → NUM-STATS-033, NUM-STATS-034: `stats.ChiSquareGoodnessOfFitUniform(counts)`; p-value `prob.ChiSquareSurvival(chi, k−1)`; critical value `prob.ChiSquareQuantile(0.95, k−1)`
+- C3 → NUM-PROB-063, NUM-PROB-064, NUM-PROB-065: `crit, _ := prob.ChiSquareQuantile(0.95, 3)` instead of the literal 7.815
+- C4 → ALG-WINDOW-016: events as `window.LabeledEvent[string]{At: t.Unix(), Label: name}`, window in the same unit (hours·3600); rate = Count/min(countA, countB) stays in the consumer (see CONSUMER DEFECTS)
+- C5 → NUM-SERIES-011: `am, nAM, _ := series.LocalHourWindowMean(pts, loc, 5, 12)`; `pm, nPM, _ := …(pts, loc, 17, 24)`; difference = am − pm; source used `t.Hour()` in the timestamp's own zone — pass the zone explicitly; min-2 rule stays in the consumer
+- C6 → UNT-MASS-001, UNT-MASS-002, UNT-LEN-001, UNT-LEN-002: `mass.KilogramsToPounds(kg)` etc.; negative values now refused; results differ from the source by ≈1.2e-6 relative for kg⇄lb
+- C7 → NUM-SERIES-009: as row ARV
+- C8 → NUM-SERIES-010: `series.AverageRateOfChangePerDay(first, last)`; per month = ×30.44 at the call site if kept; < 7 days rule stays in the consumer
+- C9 → NUM-STATS-035, NUM-STATS-036, NUM-STATS-026: `stats.FrequencyWeightedPopulationStandardDeviation(values, counts)`; CV = 100·sd/abs(mean) with mean from `stats.WeightedMean(values, float counts)`; < 2 readings: source returned 0, now a value (σ = 0 for one reading) or ErrZeroTotal
+- ComputeTrend → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (drop or re-source the 2 % band and 50 mg/dL swing (CONSUMER DEFECTS, low))
+- MomentsOf → NUM-STATS-001, ALG-STREAM-004: batch: num/stats per statistic; streaming: `var s stream.RunningStats; s.Add(x)`; Pop: keep in the consumer until a Remove exists
+- NewPrefixSums → ALG-PREFIX-001, ALG-PREFIX-002: integers: `p, _ := prefix.PrefixSums(nil, v); s, _ := prefix.RangeSum(p, 1, 6)`; float windows of fixed length: ALG-WINDOW-001 RollingSum (compensated). A float prefix-sum form is a request to the algo/prefix owner if needed
+- TopK → ALG-HEAP-003, ALG-HEAP-005, ALG-HEAP-002: `h, _ := heap.Heapify(func(a, b kv) bool { return a.n > b.n \
+- TukeyFences → NUM-STATS-032: `stats.TukeyFences(v, stats.HyndmanFan7)`; < 4 values no longer refused (source ErrTooFew{Need: 4}): the consumer keeps its own minimum
+- aap_peds_htn → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (drop the height adjustment; use the AAP percentile tables when W3 publishes them)
+- acute_gout_diagnosis → MED-RHEUM-006: score only (no band)
+- acute_pancreatitis_prediction → MED-GASTRO-008: pass pain severity 0–10 and lipase × ULN instead of category indices
+- age_adjusted_esr_crp → MED-HEMAT-017: add age guard 25–70 for CRP
+- all_readings.go → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (as ComputeTrend)
+- alvarado_appendicitis → MED-GASTRO-011: none for the score
+- arc_hbr → MED-CARDIO-053: pass major/minor counts; criteria judged by the caller
+- aspects_stroke → MED-NEURO-024: consumer's bands (≤3, ≤5, ≤7, ≤9) not in a source (low)
+- asrs_adhd → MED-PSYCH-013: none (inattention/hyperactivity sub-counts stay with the consumer)
+- audit_c → MED-PSYCH-008: "≥8 Severe Alcohol Misuse Likely" band unsourced (low)
+- bacterial_meningitis_score → —: —
+- bacterial_meningitis_score (X3) → MED-PEDS-007: the consumer passes raw lab values (or keeps its 0/1 items and their thresholds); "very low risk" reading stays with the consumer
+- bjh_stroke_dysphagia → MED-NEURO-032: consumer hard-codes "GCS < 13" (threshold is in the paper's figure, unverified)
+- blood_sugar:bs_classifier.go → MED-ENDO-015, MED-ENDO-017, MED-ENDO-021: call MED-ENDO-021 then MED-ENDO-015 / -017; aggregation, sort order and advice text stay in the consumer
+- blood_sugar:bs_trend.go → NUM-STATS-022, NUM-STATS-001, MED-ENDO-023: SD/CV via num/stats (population SD, no double rounding); trend/swing/ARV stay consumer policy (CONSUMER DEFECTS low)
+- bode_index → MED-RESP-046: none
+- body_roundness_index → MED-ANTHRO-014, MED-ANTHRO-015: call MED-ANTHRO-015 with inches; the app's BRI bands are not from Thomas 2013 (not ported)
+- boston_syncope → MED-CARDIO-055: returns count + any-present; disposition wording stays out
+- bp_adolescent_13_to_18 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_cerebral_perfusion_pressure → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported CPP bands (CONSUMER DEFECTS, low))
+- bp_child_1_to_3_no_height → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_child_3_to_6_no_height → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_child_6_to_13_no_height → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_child_age_1 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_child_age_10 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_child_age_11 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_child_age_12 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_child_age_2 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_child_age_3 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_child_age_4 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_child_age_5 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_child_age_6 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_child_age_7 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_child_age_8 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_child_age_9 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_infant_1_to_12_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_newborn_0_to_1_month → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported paediatric BP bands (CONSUMER DEFECTS, medium))
+- bp_pulmonary_vascular_resistance → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported 3/5 WU bands (CONSUMER DEFECTS, low))
+- bp_pulse_pressure_index → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported PPI bands (CONSUMER DEFECTS, low))
+- bp_pulse_pressure_variation → MED-CARDIO-046: use MED-CARDIO-046; label is the app's
+- bp_trend.go → NUM-STATS-022, NUM-STATS-001, NUM-SERIES-009: SD: `stats.PopulationStandardDeviation(v)`; CV: `100*sd/math.Abs(mean)`; ARV: `series.AverageRealVariability(v)`; source returned 0 for < 2 values — now errors; rounding to 1 dp stays in the consumer
+- brief_addiction_monitor → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (cite the manual or remove the subscales (CONSUMER DEFECTS, medium))
+- brzycki_1rm → LIF-FIT-012: call LIF-FIT-012 with load (kg or lb) and reps 1–36
+- bs_a1c_adult → MED-ENDO-013, MED-ENDO-014: `endocrine.A1CCategoryADAPercent(a1c)`; labels → ADA's; "" for below prediabetes
+- bs_a1c_from_eag → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (show eAG from A1C (MED-CHEM-005/006) only, or have Devin approve the inversion)
+- bs_cgm_metrics → MED-ENDO-023: call MED-ENDO-023 with CV = SD/mean × 100; drop the app's "High Risk"/"Below Goal" labels (not in the source)
+- bs_cgm_metrics_category → MED-ENDO-023: build the six percents from MED-ENDO-011/012; TIR 70 % no longer passes
+- bs_classifier → MED-ENDO-013: call the matching ADA function per test type
+- bs_corrected_na → MED-CHEM-013: drop the >400 switch to 2.4: Hillier's abstract says 4.0 is better above 400, not 2.4 (consumer defect)
+- bs_fasting_adult → MED-ENDO-015, MED-ENDO-021: use MED-ENDO-015/021; drop "Critically High" (CONSUMER DEFECTS, low)
+- bs_fasting_child → MED-ENDO-015, MED-ENDO-016, MED-ENDO-021: same calls as adults; child labels "Elevated"/"High" → "Prediabetes"/"Diabetes"
+- bs_gestational_ogtt_one_step → MED-ENDO-005, MED-ENDO-006: `endocrine.GDMThresholdIADPSGMgDL(f, h1, h2)`
+- bs_homa_b → MED-ENDO-025: pass glucose in mmol/L (app divides mg/dL by 18)
+- bs_homa_b_category → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, low))
+- bs_homa_ir → MED-ENDO-024: pass glucose in mmol/L; the app's bands 1.0/2.0/3.0 and labels have no source (consumer defect)
+- bs_homa_ir_category → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, low))
+- bs_ogtt_2h_adult → MED-ENDO-017, MED-ENDO-018: 200 mg/dL now "Diabetes"
+- bs_osmolality → MED-CHEM-012: use MED-CHEM-012 for effective, MED-CHEM-003 (Dorwart) for total
+- bs_quicki → MED-ENDO-026: cite Katz 2000
+- bs_quicki_category → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, low))
+- bs_random_adult → MED-ENDO-019: use MED-ENDO-019/021; drop the unsourced bands (CONSUMER DEFECTS, medium)
+- bs_random_child → MED-ENDO-019: use MED-ENDO-019/021; drop the unsourced bands (CONSUMER DEFECTS, medium)
+- bun_creatinine_ratio → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (drop the bands or cite a primary; the ratio stays a division in the consumer)
+- cage_alcohol → MED-PSYCH-009: consumer bands (1 "Borderline", ≥3 "Highly Suggestive of Alcohol Dependence") unsourced (low)
+- calcium_correction → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (use MED-CHEM-001 or cite a source for 0.8)
+- cam_icu → MED-NEURO-027: \
+- canadian_ct_head → MED-NEURO-016: labels "CT Required/Recommended/Not Necessary" are advice wording (low)
+- canadian_tia_score → MED-NEURO-030: replace the consumer's item set with Table 1 (CONSUMER DEFECTS, high); bands seen only via fetch summary (low −3..3, medium 4–8, high ≥9): not ported
+- candidate diurnal.go:114 PEFDiurnalVariabilityPercent (X2) → MED-RESP-050, MED-RESP-051, MED-RESP-052: use MED-RESP-050/051 with the day's highest and lowest of all readings
+- candidate time_in_range.go:17 CGM time in ranges (X5) → MED-ENDO-011, MED-ENDO-012, MED-ENDO-023: `endocrine.TimeInRangesMgDL(readings)`; target flag via MED-ENDO-023 (TIR > 70 %, TBR<70 < 4 %)
+- candidates compute.go:664/761/843 HOMA-IR, HOMA-β, QUICKI (X6) → MED-ENDO-024, MED-ENDO-025, MED-ENDO-026: call MED-ENDO-024/025/026; Classify* bands stay dropped (no primary cut-offs)
+- cart_score → MED-CARDIO-047: app's bands (≥8 moderate, ≥12 high, ≥20 very high) have no source; paper reports cut-off >17 only (CONSUMER DEFECT)
+- cas_covid_anxiety → MED-PSYCH-010: "5–8 Elevated — Subclinical" band unsourced (low)
+- catch_head_injury → MED-NEURO-017: none
+- cdiva → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (remove or recite (CONSUMER DEFECTS, medium))
+- chosen_risk_score → MED-RESP-027: modified CHOSEN stays in the consumer until the supplement is read
+- circ_covid → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (remove or replace: the consumer shows an unsupported number)
+- ckid_u25_egfr → MED-RENAL-017, MED-RENAL-018, MED-RENAL-019: app converts inches × 0.0254 inline: pass metres; app's average of the two estimates not built (paper's averaging not quoted verbatim)
+- copd_cat → MED-RESP-048: none
+- cows_score → MED-PSYCH-016, MED-PSYCH-017: "Buprenorphine Induction: Appropriate" at ≥ 12 is advice, not in the scale (low)
+- cpot_pain → MED-CRIT-012: citation correction to Gélinas 2006
+- crb65_calc → MED-RESP-045: none
+- crs_grading → MED-ONCO-001: consumer lacks "fever no longer required after antipyretic/anti-cytokine therapy" (low)
+- crusade_score → MED-CARDIO-048, MED-CARDIO-049: none (labels: use the paper's group names)
+- cssrs → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (tiers unsupported (CONSUMER DEFECTS, medium))
+- dapre_endurance → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (drop the endurance variant (Run already refuses))
+- dast_10 → MED-PSYCH-011, MED-PSYCH-012: citation correction; consumer labels ("None", "Low Level") vs source ("No problem", "Low level") (low)
+- diastolic_strain → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (remove the index or show the ASE algorithm inputs only)
+- dissociation → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (consumer shows an estimate with no citable source)
+- drip_pneumonia → MED-RESP-032: source's 'Very High Risk' (≥ 6) label is not in the paper
+- duke_iscvid → MED-CARDIO-054: add the rejection findings input; pass counts
+- duval_cibmtr → MED-HEMAT-011: consumer shows 3-year OS 28% (score 1) and 15% (score 2): not in Table 5 or the abstract (CONSUMER DEFECTS, low)
+- ed_safe_pss3 → MED-PSYCH-018: use attempt within 6 months; "Indeterminate" unsupported (CONSUMER DEFECTS, medium)
+- ethanol_serum_concentration → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (CONSUMER DEFECTS (medium): mass overstated ~27% for v/v percentages)
+- face_drops → MED-INFECT-003: none
+- feverpain → MED-RESP-033: citation correction; source band labels ('High Risk — 62–65%') are not the paper's
+- fio2_estimate → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (consumer shows an unsourced estimate)
+- flacc_scale → MED-SCALE-014: bands (≥ 7, ≥ 4, ≥ 1) sourced only to Univ. Michigan instructions (CONSUMER DEFECTS, low)
+- four_peps → MED-CARDIO-064, MED-CARDIO-065: consumer's "probability %" strings and D-dimer advice are not in the function (advice text)
+- four_score_coma → MED-NEURO-026: consumer bands (0, ≤4, ≤8, …) not in a source (low)
+- gds15 → MED-PSYCH-015: consumer bands (≥10, ≥8, ≥5) not sourced to Sheikh 1986 (low); citation correction
+- glasgow_alcoholic_hepatitis → MED-HEPAT-006: pass urea mmol/L, bilirubin µmol/L, PT ratio
+- glasgow_blatchford → MED-GASTRO-010: take urea mmol/L (or convert BUN ÷ 2.8) and use ≥ 70 mg/dL; consumer's "Very Low/Low/Elevated/High Risk" bands are its own (Stanley 2017 cited)
+- hear_score → MED-CARDIO-059: pass ageYears (age points computed here)
+- heart_pathway → MED-CARDIO-057, MED-CARDIO-058: age 65 → 1 point; take both serial troponins
+- hints_stroke → MED-NEURO-023: none
+- hiv_ckd_prediction → MED-RENAL-021: fix the weights (CONSUMER DEFECT high); app's low/moderate/high bands are not in the paper
+- hiv_rasp → MED-INFECT-004: citation URL PMID 17688678 is an unrelated article; correct PMID 17659153 (CONSUMER DEFECTS, low); Table 2 treatment wording not ported
+- homa_ir → MED-ENDO-024: as bs_homa_ir
+- icc_pmf → MED-HEMAT-012: none (two consecutive determinations stay the caller's)
+- icc_systemic_mastocytosis → MED-HEMAT-013: consumer lacks the SM-AMN tryptase exception (low)
+- improve_bleeding → MED-HEMAT-016: none
+- infant_diaper_0_to_1_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_diaper_12_to_18_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_diaper_18_to_24_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_diaper_1_to_3_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_diaper_24_to_36_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_diaper_3_to_6_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_diaper_6_to_9_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_diaper_9_to_12_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_feeding_0_to_1_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_feeding_12_to_18_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_feeding_18_to_24_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_feeding_1_to_3_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_feeding_24_to_36_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_feeding_3_to_6_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_feeding_6_to_9_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_feeding_9_to_12_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, low))
+- infant_growth_0_to_1_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (replace the weight benchmark by MED-PEDS-008 (0–12 months); length/head ranges unsupported (CONSUMER DEFECTS, medium))
+- infant_growth_12_to_18_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, medium))
+- infant_growth_18_to_24_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, medium))
+- infant_growth_1_to_3_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (replace the weight benchmark by MED-PEDS-008 (0–12 months); length/head ranges unsupported (CONSUMER DEFECTS, medium))
+- infant_growth_24_to_36_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported benchmarks (CONSUMER DEFECTS, medium))
+- infant_growth_3_to_6_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (replace the weight benchmark by MED-PEDS-008 (0–12 months); length/head ranges unsupported (CONSUMER DEFECTS, medium))
+- infant_growth_6_to_9_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (replace the weight benchmark by MED-PEDS-008 (0–12 months); length/head ranges unsupported (CONSUMER DEFECTS, medium))
+- infant_growth_9_to_12_months → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (replace the weight benchmark by MED-PEDS-008 (0–12 months); length/head ranges unsupported (CONSUMER DEFECTS, medium))
+- injury_severity_score → MED-TRAUMA-016: app's bands < 9 / 9–15 / 16–24 / ≥ 25 not seen
+- iota_simple_rules → MED-OB-002: call MED-OB-002 with the counts of M and B features for the classification; the risk % stays unported
+- kt_v_dialysis → MED-RENAL-024: app's V = 0.6 × weight has no source found (the one secondary seen, Churchill 2021 PMC8240937, says 55% of post-dialysis weight): CONSUMER DEFECT; bands 1.0/1.2/1.4 not ported (KDOQI 2015, PMID 26498416, not open)
+- lams → MED-NEURO-025: consumer bands (≥4, ≥2) not sourced (low)
+- lights_criteria → MED-RESP-047: none
+- lips_score → MED-RESP-043: allow several trauma rows; citation correction
+- lrinec_score → MED-CRIT-019: app bands ≥ 8 high / ≥ 6 intermediate: Hoesl prints ≤5 / 6–7 / ≥8 with risk %, one source only, not ported
+- maddrey_discriminant → MED-HEPAT-007: none
+- mcmahon_rhabdomyolysis → MED-RENAL-020: app bands < 6 "Low Risk (~3%)", ≥ 6 "86% sensitive, 68% specific", ≥ 10 "High Risk — 52%" not in the paper (it reports < 5 → 2.3%, > 10 → 61.2%): CONSUMER DEFECT. Age floor 18 is the adult cohort, not a printed limit (CONFIRM)
+- mdq_bipolar → MED-PSYCH-014: none
+- mdrd_gfr → MED-RENAL-022, MED-RENAL-023: app cites Levey 1999 (186, 6-variable): cite Levey 2006; race coefficient kept as the source's own term (decision for Devin)
+- measurement_weight_trend.go → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported thresholds (CONSUMER DEFECTS, low))
+- mess_score → MED-TRAUMA-019: fix the age-50 edge; app's "No ischemia (0)" option and 5–6 "borderline" band not in the sources (CONSUMER DEFECT medium)
+- mets_ir → MED-ENDO-027: the app's ">50.39 high risk" uses the abstract's top-quartile edge as a label (not ported)
+- moca_score → MED-NEURO-035: consumer band "< 17 Significant Cognitive Impairment" not sourced (low)
+- modified_fisher_sah → MED-NEURO-028: consumer vasospasm % per grade unsourced here (low)
+- modified_shock_index → MED-CARDIO-056: pass a MAP; app's category labels (hyperdynamic / borderline) have no source — paper gives thresholds 0.7 and 1.3 only
+- msofa → MED-CRIT-015: app takes picked component scores; mortality bands 4/31/58% are the paper's day-1 figures (0–7, 8–11, > 11) — not ported (no labels)
+- mtoq4 → MED-NEURO-033, MED-NEURO-034: citation correction to Lipton 2015
+- myxedema_coma → MED-ENDO-028: at-risk band: primary abstract 45–59, secondaries 25–59 — the consumer should not show 25–44 as at-risk until the PDF settles it (CONSUMER DEFECTS, provisional)
+- nafld_activity_score → MED-HEPAT-008: none (disagreement abstract vs secondaries listed in CONFIRM)
+- ndi → MED-SCALE-011, MED-SCALE-012: consumer labels are title-case variants of the source's; percentage = 2 × total stays with the consumer
+- nedocs → MED-EMERG-002, MED-EMERG-003: none (level function added)
+- new_orleans_head_ct → MED-NEURO-018: "≥3 Multiple Risk Factors" band and "Safe for Discharge" wording unsourced (low)
+- nexus_head_ct → MED-NEURO-019: "≥3 Multiple Criteria" band unsourced (low)
+- nhfs → MED-TRAUMA-021, MED-TRAUMA-022: mortality uses 5.012 from a garbled abstract (Karres: 5.0122); mortality bands ≥ 20/10/5 % unsourced (CONSUMER DEFECTS)
+- o2_classifier.go → MED-RESP-009, MED-RESP-010: use MED-RESP-009/010; bands unsupported (CONSUMER DEFECTS, low)
+- oakland_score → MED-GASTRO-013: consumer's safe-discharge % per score is from Table 3 (not ported)
+- ost_osteoporosis → MED-ENDO-029, MED-ENDO-030, MED-ENDO-031: consumer should apply the women's bands only to women; male bands (Adler 2003, PMID 12934782) not built
+- ottawa_copd → MED-RESP-030, MED-RESP-031: drop the 85.0 % for score 9 (Table 8: NA)
+- ottawa_sah_rule → MED-NEURO-020: "≥3 Multiple Criteria" band unsourced (low)
+- painad → MED-SCALE-015: bands (≥ 7, ≥ 4, ≥ 1) differ from the only published bands found (Malara 2016, overlapping at 7) (CONSUMER DEFECTS, low)
+- palchak_pediatric_head_trauma → MED-NEURO-021: none
+- pars → MED-RESP-042: citation correction (PMID 30554722)
+- pas_ii_ra → MED-RHEUM-009, MED-RHEUM-010: HAQ-II 10-item mean stays with the consumer until Wolfe 2004 (Arthritis Rheum 50:3296) is read
+- pas_ra → MED-RHEUM-009, MED-RHEUM-010: the HAQ-DI category/aids arithmetic stays with the consumer (no source read)
+- pcp_hf → MED-CARDIO-060: app offers "White/Other"; the paper derived White and Black equations only; app age max 79 vs paper 30–80
+- pecarn → MED-NEURO-022: tiers stay with the consumer until Figure 3 is read
+- pecarn_cspine → MED-TRAUMA-023: applies_when 18–120 for a rule enrolled in children < 18; labels "CT Imaging Recommended" / "X-Rays Recommended" / "Clinical Clearance Appropriate" are advice; neck pain and midline tenderness merged into one input (no effect on the group) (CONSUMER DEFECTS)
+- pediatric_trauma_score → MED-TRAUMA-018: JSON applies_when 18–120 is wrong for a paediatric score; bands < 0 / ≤ 4 not seen (only ≤ 8 sourced)
+- pef_diurnal.go → MED-RESP-050, MED-RESP-051, MED-RESP-052: per day `respiratory.PEFAmplitudePercentMean(hi, lo)`; average `PEFDiurnalVariabilityPercent(his, los)` (group days with NUM-SERIES-005); round at display; threshold via MED-RESP-052; complexity map per call → O(d), no allocation
+- pef_exacerbation_percent_personal_best → MED-RESP-054: labels → the table's cell text, row via .Level(); 50 % moves to the acute-severe cell, 75 % to moderate; no "Mild"; PEF is one criterion of each row (life-threatening needs SpO2 <92 % too)
+- pef_exacerbation_percent_predicted → MED-RESP-054: same call with % predicted when no recent best is known
+- pef_flowmetric → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (consumer shows an unsourced predicted PEF)
+- pef_percent_predicted_category → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (consumer shows unsourced % predicted bands; use MED-RESP-026 (personal best) or MED-RESP-054 cells)
+- pef_population_adult_female → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (consumer shows unsourced population bands)
+- pef_population_adult_male → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (as female)
+- pef_population_adult_sex_unspecified → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (as female)
+- pef_population_child_5_to_18 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (as female)
+- pef_predicted → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (consumer shows a predicted PEF the cited paper does not give)
+- pef_reversibility_category → MED-RESP-053: `respiratory.PEFChangeConsistentWithAsthmaGINA(changePct, age)`; label → bool; ≥ 60 L/min criterion not in GINA (not ported)
+- pef_variability_adult → MED-RESP-052: bool from MED-RESP-052; the > 20 band goes or gets a source
+- pef_variability_child → MED-RESP-052: pass age; 12–17 y now use > 10 %; age 5 refused
+- pef_zone → MED-RESP-026: call MED-RESP-026
+- pesi → MED-RESP-028, MED-RESP-029: none
+- pews → MED-PEDS-006: change nebuliser and vomiting points to 2; fix the citation URL (CONSUMER DEFECTS)
+- phoenix_sepsis → MED-CRIT-017: app label "D-dimer >2 µg/mL FEU" equals 2 mg/L FEU (same quantity)
+- plasmic_ttp → MED-HEMAT-019, MED-HEMAT-020: none
+- pompe_c → MED-RESP-037, MED-RESP-038: use the equation's 0.800 and −0.063
+- preset_ecmo → MED-RESP-034, MED-RESP-035: none
+- pucai → MED-GASTRO-014, MED-GASTRO-015, MED-GASTRO-015: consumer labels ("Remission — Disease Not Active", "Mild Ulcerative Colitis" …) are its own wording
+- pulse_adult_18_plus → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, low))
+- pulse_athlete_adolescent_13_to_18 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, low))
+- pulse_athlete_adult_18_plus → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, low))
+- pulse_classifier.go → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, medium))
+- pulse_rate_pressure_product_active → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, low))
+- pulse_rate_pressure_product_rest → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, low))
+- qcsi_covid → MED-RESP-036: risk groups are in the paper's Figure 4; source labels unverified
+- ranson_pancreatitis → MED-GASTRO-009: the app's mortality strings are not from these sources (not ported)
+- rasi_calc → MED-CARDIO-033: use MED-CARDIO-033; fix citation
+- readmits_ami → MED-CARDIO-050, MED-CARDIO-051: pass whole decades above 18
+- rems → MED-CRIT-018: app derives MAP from SBP/DBP (formula unsourced here: pass MAP); risk bands 3/6/9/13 not seen
+- rescue_ihca → MED-CARDIO-052: drop the invented mortality % (CONSUMER DEFECT)
+- resect_90 → MED-RESP-039: convert creatinine to µmol/L before calling
+- revised_trauma_score → MED-TRAUMA-020: recite Champion 1989; T-RTS bands (≤ 3 "Expectant", ≤ 10 "Immediate", 11 "Urgent", 12 "Delayed") have no source (CONSUMER DEFECTS)
+- rifle_criteria → MED-RENAL-025, MED-RENAL-026: app "≥ 4 mg/dL" edge: use > 4.0 with rise ≥ 0.5 (primary legend)
+- rr_adult_18_plus → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, low))
+- rr_classifier.go → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, medium))
+- saps3_score → MED-CRIT-020, MED-CRIT-021: picker points disagree with Table 1 in most rows (e.g. "AIDS (14 pts)", "Metastatic cancer (17 pts)", "ER (8 pts)", "Other ICU (5 pts)", "≥70 (13 pts)" for 70–80+, GCS "6–8 (13 pts)", HR "Not available (11 pts)"); comorbidity and reason are single choices though the paper adds all that apply (CONSUMER DEFECTS, high)
+- serum_anion_gap → MED-CHEM-011, MED-CHEM-008: delta gap / delta ratio (normal AG 12, HCO3 24) have no source (not ported)
+- sf_syncope_rule → MED-CARDIO-063: pass hematocrit and SBP numbers (thresholds applied here)
+- silverman_calc → MED-RESP-049: source bands (≥ 7, ≥ 4, ≥ 1) unverified
+- sins_score → MED-TRAUMA-017: band labels returned by the app; not returned here (labels' exact wording not confirmed)
+- sirs → MED-CRIT-013: add the PaCO2 and band arms (CONSUMER DEFECT medium); app's "WBC 0 = not available" sentinel; °F input converted in the consumer
+- sirs_calc → MED-CRIT-013: cite the consensus; none else
+- sofa2_score → MED-CRIT-016: app cannot express footnotes f (SpO2:FiO2 cut-offs), h (cap 2 without support), l (dopamine), m (MAP-only): pass raw values here
+- sofa_score → MED-CRIT-014: app's Ferreira 2001 mortality strings not ported; SI twin not built (the tables print their own µmol/L cut-offs, not 88.4 conversions: decision for Devin)
+- spo2_adult_18_to_70 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, medium))
+- spo2_child_1_to_18 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, medium))
+- spo2_copd_adult → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, low))
+- spo2_infant_0_to_1 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, medium))
+- spo2_neonatal_preterm → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, medium))
+- spo2_older_adult_70_plus → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported bands (CONSUMER DEFECTS, medium))
+- spo2_oxygenation_index_category → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (OI bands contradict PALICC (CONSUMER DEFECTS, medium))
+- spo2_sf_ratio_category → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (235 edge unsupported (CONSUMER DEFECTS, low))
+- stumbl_battle_score → MED-RESP-040: none
+- temp_classifier → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported age bands shown as "Normal" (CONSUMER DEFECTS))
+- temp_clinical_scores → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (as temp_classifier)
+- temp_mean_body → —: drop the bands (CONSUMER DEFECTS, low); for the med/thermoregulation owner
+- temp_metabolic_cost → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported kcal output (CONSUMER DEFECTS, low))
+- temp_q10 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported fixed Q10 (CONSUMER DEFECTS, low))
+- temperature_fever_metabolic_cost → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (unsupported (CONSUMER DEFECTS, low))
+- temperature_oral_adult_11_to_65 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (use MED-THERMO-001/002 for the hypothermia rows (core only); fever/"Normal" bands unsupported (CONSUMER DEFECTS, medium))
+- temperature_oral_c_adult_11_to_65 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (use MED-THERMO-001/002 for the hypothermia rows (core only); fever/"Normal" bands unsupported (CONSUMER DEFECTS, medium))
+- temperature_oral_c_child_0_to_11 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (use MED-THERMO-001/002 for the hypothermia rows (core only); fever/"Normal" bands unsupported (CONSUMER DEFECTS, medium))
+- temperature_oral_c_older_adult_65_plus → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (use MED-THERMO-001/002 for the hypothermia rows (core only); fever/"Normal" bands unsupported (CONSUMER DEFECTS, medium))
+- temperature_oral_child_0_to_11 → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (use MED-THERMO-001/002 for the hypothermia rows (core only); fever/"Normal" bands unsupported (CONSUMER DEFECTS, medium))
+- temperature_oral_older_adult_65_plus → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (use MED-THERMO-001/002 for the hypothermia rows (core only); fever/"Normal" bands unsupported (CONSUMER DEFECTS, medium))
+- thakar_score → MED-RENAL-027: —
+- tlics → MED-TRAUMA-015: drop "None"; app labels ("Operative — Stabilization Recommended") are advice, not the score
+- urine_output_fluid_balance → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (drop the unsupported bands; show the KDIGO duration-based criteria)
+- utah_covid_risk → MED-RESP-041: add the two items and fix the weights
+- vaco_index → none: SOURCE DOES NOT SUPPORT; stop showing the number or cite a supported instrument (remove or replace: the consumer shows an unsupported mortality)
+- wast → MED-SCALE-013: drop or source the cut-offs; WAST-Short per CDC is 0–2 with cut-off 1 (CONSUMER DEFECTS, low)
+- wat1 → MED-PEDS-005: none for the sum
+- wathen_1rm → LIF-FIT-014: call LIF-FIT-014
+- years_algorithm → MED-CARDIO-062: pass the item count and D-dimer in ng/mL
