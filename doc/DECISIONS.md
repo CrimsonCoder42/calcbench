@@ -578,3 +578,11 @@ reordering D-009.
   macros, which POSIX does not define (no source, no ship). Next searches civil fields with carries over bitsets,
   never minute by minute; DST rules as the request states (gap → the transition instant, overlap → first occurrence
   only). Lost: a time/calendar package (not in the taxonomy) and the Vixie extensions (no primary standard).
+
+## D-088 toolbench requests R-4, R-5: two methods on existing types (2026-11-13, S21, DECIDED D1–D2)
+- **TokenBucket.Restore (ALG-RATELM-005).** Gives back n tokens the caller took earlier: refill to now, then add n
+  tokens capped at the burst; n ≤ 0 and the zero value are no-ops. The caller counts the tokens to return (as
+  x/time/rate's Reservation.CancelAt does); Allow is unchanged. Lost: a Reserve that may go into debt (a second,
+  negative-level state that every existing method would have to learn, and a change to released semantics).
+- **LRUCache.Oldest (ALG-LIST-018).** The entry Put would evict next, read without a use. Newest is not added: it
+  would need its own ID, doc comment and tests, which is more than the one line D2 allowed. Lost: Newest beside it.

@@ -24,4 +24,5 @@
 //	ALG-RATELM-002  LeakyBucket       GCRA virtual scheduling, one cell per request (ITU-T I.371 Annex A)
 //	ALG-RATELM-003  FixedWindow       jumping window: at most limit per consecutive window of length W
 //	ALG-RATELM-004  SlidingWindowLog  moving window: at most limit in any span of length W, exact log
+//	ALG-RATELM-005  TokenBucket.Restore  give back n tokens taken earlier, capped at the burst
 package ratelimit

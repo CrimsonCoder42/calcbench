@@ -2,6 +2,11 @@
 
 Newest first. Each entry: date, slice, the IDs with file:line.
 
+## 2026-11-13 — S21 toolbench requests R-4, R-5 (shipped)
+Work `toolbench_wave5_2026-11-13/` (BRIEF, README, REPORT). Decision D-088; assumptions A-072, A-073. 2 methods on existing types, additive.
+- `algo/ratelimit` (1): ALG-RATELM-005 TokenBucket.Restore `algo/ratelimit/token_bucket_restore.go:20`
+- `algo/list` (1): ALG-LIST-018 LRUCache.Oldest `algo/list/lru_cache_oldest.go:14`
+
 ## 2026-11-13 — S20 toolbench requests R-1…R-3 (shipped)
 Work `toolbench_requests_2026-11-13/` (BRIEF, README, REPORT). Decision D-087; assumptions A-068…A-071. 7 functions; new algo/backoff and algo/cron.
 - `algo/backoff` (4): ALG-BACKOF-001 Exponential `algo/backoff/exponential.go:37` · ALG-BACKOF-002 FullJitter `algo/backoff/full_jitter.go:23` · ALG-BACKOF-003 EqualJitter `algo/backoff/equal_jitter.go:20` · ALG-BACKOF-004 DecorrelatedJitter `algo/backoff/decorrelated_jitter.go:24`

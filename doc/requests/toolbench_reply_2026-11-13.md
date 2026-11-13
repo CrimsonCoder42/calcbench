@@ -12,3 +12,10 @@ Answers `toolbench/doc/wave1_2026-11-13/calcbench_requests.md` R-1…R-3. Built 
 - ALG-CRON-002 · `algo/cron` · `func (c CronSpec) Next(after time.Time) (time.Time, error)`
 - algo/cron errors · `ErrSyntax` (malformed, incl. `/` steps, names, `@` macros: POSIX only, A-069) · `ErrRange` (value out of range, lo > hi, dow 7) · `ErrNeverFires` (e.g. "0 0 31 2 *")
 - cron day rule · month always restricts; dom and dow ORed only when both are not `*` (A-068) · DST: gap → the transition instant, once; overlap → the first occurrence only
+
+## v0.3.0
+
+Answers `toolbench/doc/wave5_2026-11-13/calcbench_requests.md` R-4, R-5. Built in calcbench S21 (D-088).
+
+- ALG-RATELM-005 · `algo/ratelimit` · `func (b *TokenBucket) Restore(n int64, now time.Time)`
+- ALG-LIST-018 · `algo/list` · `func (c *LRUCache[K, V]) Oldest() (key K, value V, ok bool)`

@@ -32,4 +32,5 @@
 //	ALG-LIST-015  LRUCache                 least-recently-used cache, O(1) per operation
 //	ALG-LIST-016  LFUCache                 least-frequently-used cache (LRU among ties), O(1) per operation
 //	ALG-LIST-017  AddTwoNumbers            sum of two digit lists, least significant digit first
+//	ALG-LIST-018  LRUCache.Oldest          the least recently used entry, not removed, recency unchanged
 package list
